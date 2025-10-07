@@ -1,50 +1,118 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface Options {
-  margin?: string
-  threshold?: number
+  /**
+   * Ratio (0 - 1) of the viewport height that acts as the "activation" line.
+   * Defaults to 0.35 (35% down from the top of the viewport).
+   */
+  triggerRatio?: number
+  /**
+   * Optional section id to use as the initial highlight before any scroll occurs.
+   */
+  initialSection?: string
 }
 
 export const useActiveSection = (
   sectionIds: readonly string[],
-  { margin = '-30% 0px -50% 0px', threshold = 0.4 }: Options = {},
+  { triggerRatio = 0.35, initialSection }: Options = {},
 ) => {
-  const [activeSection, setActiveSection] = useState(sectionIds[0] ?? '')
+  const fallbackSection = initialSection ?? sectionIds[0] ?? ''
+  const [activeSection, setActiveSection] = useState(fallbackSection)
+  const activeSectionRef = useRef(activeSection)
 
   useEffect(() => {
-    if (sectionIds.length === 0) {
+    activeSectionRef.current = activeSection
+  }, [activeSection])
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || sectionIds.length === 0) {
       return
     }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
-          .forEach((entry) => {
-            const id = entry.target.getAttribute('id')
-            if (id) {
-              setActiveSection(id)
-            }
-          })
-      },
-      {
-        rootMargin: margin,
-        threshold,
-      },
-    )
+    const getSectionElements = () =>
+      sectionIds
+        .map((id) => {
+          const element = document.getElementById(id)
+          if (!element) {
+            return null
+          }
+          return { id, element }
+        })
+        .filter((item): item is { id: string; element: HTMLElement } => Boolean(item))
 
-    const elements = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter((el): el is HTMLElement => Boolean(el))
+    const computeActiveSection = () => {
+      const elements = getSectionElements()
+      if (elements.length === 0) {
+        return activeSectionRef.current
+      }
 
-    elements.forEach((el) => observer.observe(el))
+      const triggerLine = window.innerHeight * triggerRatio
+
+      const sectionsAboveTrigger = elements
+        .map(({ id, element }) => ({ id, top: element.getBoundingClientRect().top }))
+        .filter((section) => section.top <= triggerLine)
+
+      if (sectionsAboveTrigger.length > 0) {
+        return sectionsAboveTrigger.reduce((closest, current) =>
+          current.top > closest.top ? current : closest,
+        ).id
+      }
+
+      const closestSection = elements
+        .map(({ id, element }) => ({
+          id,
+          distance: Math.abs(element.getBoundingClientRect().top - triggerLine),
+        }))
+        .reduce<{
+          id: string
+          distance: number
+        } | null>((closest, current) => {
+          if (!closest || current.distance < closest.distance) {
+            return current
+          }
+          return closest
+        }, null)
+
+      return closestSection?.id ?? elements[0]?.id ?? fallbackSection
+    }
+
+    let frameRequest: number | null = null
+
+    const scheduleUpdate = () => {
+      if (frameRequest !== null) {
+        return
+      }
+      frameRequest = window.requestAnimationFrame(() => {
+        frameRequest = null
+        const nextSection = computeActiveSection()
+        if (nextSection && nextSection !== activeSectionRef.current) {
+          setActiveSection(nextSection)
+        }
+      })
+    }
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState !== 'visible') {
+        return
+      }
+      scheduleUpdate()
+    }
+
+    window.addEventListener('scroll', scheduleUpdate, { passive: true })
+    window.addEventListener('resize', scheduleUpdate)
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+
+    scheduleUpdate()
 
     return () => {
-      elements.forEach((el) => observer.unobserve(el))
-      observer.disconnect()
+      if (frameRequest !== null) {
+        window.cancelAnimationFrame(frameRequest)
+      }
+      window.removeEventListener('scroll', scheduleUpdate)
+      window.removeEventListener('resize', scheduleUpdate)
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
     }
-  }, [margin, sectionIds, threshold])
+  }, [fallbackSection, sectionIds, triggerRatio])
 
-  return activeSection
+  return { activeSection, setActiveSection }
 }

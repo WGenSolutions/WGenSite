@@ -8,12 +8,16 @@ import LanguageSwitcher from './LanguageSwitcher'
 interface HeaderProps {
   activeSection: string
   sections: Array<{ id: string; label: string }>
+  onSectionSelect: (sectionId: string) => void
 }
-export const Header = ({ activeSection, sections }: HeaderProps) => {
+export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps) => {
   const { t } = useTranslation('common')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const handleNavClick = () => {
+  const handleNavClick = (sectionId?: string) => {
+    if (sectionId) {
+      onSectionSelect(sectionId)
+    }
     setIsMenuOpen(false)
   }
 
@@ -24,7 +28,7 @@ export const Header = ({ activeSection, sections }: HeaderProps) => {
           href="#hero"
           className="flex shrink-0 items-center gap-3 rounded-xl text-left"
           aria-label={t('brand.name', { defaultValue: 'WGen' })}
-          onClick={handleNavClick}
+          onClick={() => handleNavClick()}
         >
           <span className="relative flex items-center">
             <span
@@ -49,7 +53,7 @@ export const Header = ({ activeSection, sections }: HeaderProps) => {
             <a
               key={section.id}
               href={`#${section.id}`}
-              onClick={handleNavClick}
+              onClick={() => handleNavClick(section.id)}
               className={clsx(
                 'rounded-full px-5 py-2 text-[0.75rem] font-semibold uppercase tracking-[0.2em] font-display transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 lg:text-[0.8rem] lg:px-6',
                 activeSection === section.id
@@ -102,7 +106,7 @@ export const Header = ({ activeSection, sections }: HeaderProps) => {
                         ? 'bg-primary/20 text-primary'
                         : 'text-muted hover:text-foreground',
                     )}
-                    onClick={handleNavClick}
+                    onClick={() => handleNavClick(section.id)}
                   >
                     {section.label}
                   </a>

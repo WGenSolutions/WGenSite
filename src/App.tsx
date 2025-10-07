@@ -35,7 +35,7 @@ function App() {
     [t],
   )
 
-  const activeSection = useActiveSection(SECTION_IDS)
+  const { activeSection, setActiveSection } = useActiveSection(SECTION_IDS)
 
   useEffect(() => {
     if (typeof document === 'undefined') return
@@ -62,7 +62,11 @@ function App() {
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
-      <Header sections={sections} activeSection={activeSection} />
+      <Header
+        sections={sections}
+        activeSection={activeSection}
+        onSectionSelect={(sectionId) => setActiveSection(sectionId)}
+      />
       <main className="relative z-10 flex flex-col gap-20 pb-24">      
         <AuroraBackground />        
         <Hero />
