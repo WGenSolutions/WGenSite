@@ -9,8 +9,9 @@ const floatingShapes = [
 ]
 
 export const Hero = () => {
-  const { t } = useTranslation('home')
-  const prefersReducedMotion = useReducedMotion()
+  const { t } = useTranslation('home');
+  const { t: t2 } = useTranslation('common');
+  const prefersReducedMotion = useReducedMotion();
 
   return (
     <section
@@ -68,7 +69,7 @@ export const Hero = () => {
           className="flex flex-col gap-6"
         >
           <span className="self-start rounded-full border border-white/10 bg-background/60 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
-            {t('products.automationCenter.headline')}
+            {t2('brand.tagline')}
           </span>
           <h1
             id="hero-title"
