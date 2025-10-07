@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "Buduj lepiej, szybciej.",
+    "subtitle": "Od stron wizytówek po złożone aplikacje i automatyzację procesów – dostarczamy przemyślane rozwiązania.",
+    "primaryCta": "Poznaj naszą ofertę",
+    "secondaryCta": "Zaproponuj aplikację"
+  },
+  "offer": {
+    "title": "Oferta",
+    "subtitle": "Technologia i automatyzacje dopasowane, aby szybko dowozić wartość.",
+    "cards": {
+      "websites": {
+        "title": "Strony WWW",
+        "body": "Strony wizytówki, one-page, serwisy wielostronicowe i zaawansowane serwisy z modułami na miarę."
+      },
+      "apps": {
+        "title": "Dedykowane aplikacje",
+        "body": "Aplikacje szyte na miarę Twoich procesów."
+      },
+      "automations": {
+        "title": "Automatyzacje",
+        "body": "Usprawniamy procesy z naszą platformą Automation Center."
+      },
+      "exitExcel": {
+        "title": "Koniec z Excelem",
+        "body": "Polegasz na arkuszach? Pomożemy wyjść poza Excela."
+      },
+      "widgets": {
+        "title": "Widgety i mobile",
+        "body": "Szybki dostęp do danych firmy w ruchu."
+      }
+    }
+  },
+  "products": {
+    "title": "Produkty",
+    "automationCenter": {
+      "headline": "Automation Center",
+      "description": "Nasza platforma do orkiestracji automatyzacji biurowych i produkcyjnych.",
+      "features": [
+        "Graficzny projektant procesów z modułami wielokrotnego użycia",
+        "Monitoring w czasie rzeczywistym i akceptacje z udziałem ludzi",
+        "Integracje z ERP, MES, arkuszami, komunikatorami i systemami własnymi",
+        "Wdrożenia on-premise lub w chmurze z granularnymi uprawnieniami"
+      ],
+      "cta": "Umów demo"
+    }
+  },
+  "experience": {
+    "title": "Doświadczenie",
+    "body": "Przez lata współpracowaliśmy z firmami produkcyjnymi, logistycznymi i usługowymi, tworząc skalowalne oraz intuicyjne rozwiązania: narzędzia do zarządzania produkcją i komunikacji na liniach, systemy planowania produkcji, pulpity magazynowe, aplikacje mobilne cross-platform, portale ocen pracowniczych, systemy zamówień lunchy i wiele innych.",
+    "focus": "Ostatnio szczególnie koncentrujemy się na automatyzacjach biurowych i produkcyjnych budowanych na naszej platformie Automation Center."
+  },
+  "about": {
+    "title": "O nas",
+    "paragraphs": [
+      "Jesteśmy małym, zwinnym zespołem pasjonatów developmentu, gotowym pracować niestandardowo, by dostarczyć szybciej.",
+      "Wiele firm żyje w Excelu — automatyzujemy powiązania między arkuszami i systemami.",
+      "Wykorzystujemy narzędzia AI, by dostarczać szybciej, zachowując wysoką jakość.",
+      "Nasza przewaga: najprostsze projekty dowozimy w 24 godziny."
+    ],
+    "cta": "Wybrane aplikacje, które stworzyliśmy",
+    "apps": [
+      "Kokpit statusów produkcji na tabletach dla hali",
+      "Globalny portal zamówień części zamiennych zintegrowany z ERP",
+      "Proces ocen 360° z botami Slack i Teams",
+      "Aplikacja do logowania kontroli jakości wspierana przez AI"
+    ]
+  },
+  "hobby": {
+    "title": "Co budujemy po godzinach",
+    "weather": "Widget pogodowy — wkrótce.",
+    "next": "Co dalej? Zaproponuj pomysł."
+  },
+  "form": {
+    "title": "Zaproponuj aplikację",
+    "body": "Jeśli pomysł nam się spodoba, otrzymasz darmowy dostęp."
+  }
+}

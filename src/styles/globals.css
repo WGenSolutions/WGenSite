@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-background: #0b0f1a;
+  --color-foreground: #f4f7ff;
+  --color-primary: #5c6dfd;
+  --color-secondary: #9d6cff;
+  --color-accent: #36e6ff;
+  --color-muted: rgba(244, 247, 255, 0.65);
+  --color-card: rgba(12, 17, 26, 0.75);
+  --header-backdrop: rgba(11, 15, 26, 0.72);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --color-background: #f5f7ff;
+  --color-foreground: #0b0f1a;
+  --color-primary: #4d5dff;
+  --color-secondary: #904cfa;
+  --color-accent: #1fb6ff;
+  --color-muted: rgba(11, 15, 26, 0.65);
+  --color-card: rgba(255, 255, 255, 0.78);
+  --header-backdrop: rgba(245, 247, 255, 0.82);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html,
+body {
+  @apply bg-background text-foreground antialiased scroll-smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    135deg,
+    rgba(92, 109, 253, 0.14),
+    rgba(157, 108, 255, 0.08)
+  );
+  background-attachment: fixed;
+}
+
+::selection {
+  background-color: rgba(92, 109, 253, 0.35);
+  color: var(--color-foreground);
+}
+
+a {
+  @apply text-primary hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background transition;
+}
+
+button {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+.header-blur {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.neon-ring {
+  position: relative;
+}
+
+.neon-ring::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: 20px;
+  background: linear-gradient(
+    120deg,
+    rgba(92, 109, 253, 0.7),
+    rgba(24, 205, 255, 0.7),
+    rgba(157, 108, 255, 0.7)
+  );
+  opacity: 0.65;
+  filter: blur(12px);
+  z-index: -1;
+}
+
+.aurora-grid {
+  position: absolute;
+  inset: -1px;
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 0),
+    linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 0);
+  background-size: 120px 120px;
+  opacity: 0.15;
+  mask-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.95),
+    transparent 70%
+  );
+  -webkit-mask-image: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.95),
+    transparent 70%
+  );
+}
+
+.aurora-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  pointer-events: none;
+}
+
+.button-shine {
+  position: relative;
+}
+
+.button-shine::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(54, 230, 255, 0.45),
+    rgba(255, 255, 255, 0.1)
+  );
+  opacity: 0;
+  transform: translateX(-60%);
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.button-shine:hover::before,
+.button-shine:focus-visible::before {
+  opacity: 0.8;
+  transform: translateX(60%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

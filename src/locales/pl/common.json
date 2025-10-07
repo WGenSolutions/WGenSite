@@ -1,0 +1,52 @@
+{
+  "meta": {
+    "title": "WGen",
+    "description": "Software | Automatyzacja AI | Web Dev"
+  },
+  "brand": {
+    "name": "WGen",
+    "tagline": "Software | Automatyzacja AI | Web Dev"
+  },
+  "navigation": {
+    "hero": "Start",
+    "offer": "Oferta",
+    "products": "Produkty",
+    "experience": "Doświadczenie",
+    "about": "O nas",
+    "hobby": "Co tworzymy",
+    "propose": "Zaproponuj aplikację"
+  },
+  "actions": {
+    "language": "Język",
+    "theme": "Motyw",
+    "light": "Jasny",
+    "dark": "Ciemny",
+    "system": "Systemowy",
+    "openMenu": "Otwórz nawigację",
+    "closeMenu": "Zamknij nawigację",
+    "close": "Zamknij"
+  },
+  "languages": {
+    "en": "Angielski",
+    "pl": "Polski",
+    "fr": "Francuski"
+  },
+  "footer": {
+    "rights": "© {{year}} WGen. Wszelkie prawa zastrzeżone.",
+    "privacy": "Polityka prywatności",
+    "imprint": "Impressum",
+    "social": "Media społecznościowe",
+    "linkedin": "LinkedIn",
+    "github": "GitHub"
+  },
+  "form": {
+    "email": "E-mail",
+    "company": "Firma (opcjonalnie)",
+    "idea": "Pomysł",
+    "consent": "Wyrażam zgodę na kontakt w sprawie mojego pomysłu.",
+    "consentError": "Zgoda jest wymagana, aby przesłać formularz.",
+    "success": "Dziękujemy! Przejrzymy Twój pomysł.",
+    "error": "Coś poszło nie tak — spróbuj ponownie.",
+    "send": "Wyślij"
+  }
+}

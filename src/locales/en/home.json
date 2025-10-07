@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "Build better, faster.",
+    "subtitle": "From one-page sites to complex apps and process automation, we deliver thoughtfully engineered solutions.",
+    "primaryCta": "Explore our offer",
+    "secondaryCta": "Propose an app"
+  },
+  "offer": {
+    "title": "Offer",
+    "subtitle": "Technology and automation services tailored to ship value at startup speed.",
+    "cards": {
+      "websites": {
+        "title": "Websites",
+        "body": "Business card, one-page, multipage, or advanced dynamic sites with custom modules."
+      },
+      "apps": {
+        "title": "Custom apps",
+        "body": "Tailor-made applications for your unique workflows."
+      },
+      "automations": {
+        "title": "Automations",
+        "body": "Streamline processes with our Automation Center platform."
+      },
+      "exitExcel": {
+        "title": "Exit Excel",
+        "body": "Relying on spreadsheets? We’ll help you scale beyond Excel."
+      },
+      "widgets": {
+        "title": "Widgets & mobile",
+        "body": "Get quick access to company data on the go."
+      }
+    }
+  },
+  "products": {
+    "title": "Products",
+    "automationCenter": {
+      "headline": "Automation Center",
+      "description": "Our platform for orchestrating office and production automations.",
+      "features": [
+        "Visual workflow designer with reusable building blocks",
+        "Real-time monitoring and human-in-the-loop approvals",
+        "Connects ERP, MES, sheets, chat, and custom systems",
+        "Deploys on-prem or cloud with granular access control"
+      ],
+      "cta": "Book a walkthrough"
+    }
+  },
+  "experience": {
+    "title": "Experience",
+    "body": "Over the years we've partnered with manufacturing, logistics, and service companies to deliver scalable, easy-to-use products: production management and line communication tools, production planning suites, warehouse operations dashboards, cross-platform mobile apps, employee evaluation portals, lunch ordering systems, and many more.",
+    "focus": "Recently we have doubled down on office and production automations built with our proprietary Automation Center platform."
+  },
+  "about": {
+    "title": "About us",
+    "paragraphs": [
+      "We are a small, fast-moving team of passionate developers ready to put in odd hours to ship faster.",
+      "Many companies rely on Excel — we help automate the relationships between sheets and systems.",
+      "We leverage AI tools to build high-quality products quickly while keeping humans in control.",
+      "Our differentiator: the simplest projects delivered within 24 hours."
+    ],
+    "cta": "Selected apps we've built",
+    "apps": [
+      "Production status cockpit with shop-floor tablets",
+      "Global spare parts ordering portal integrated with ERP",
+      "HR 360° feedback workflow with Slack and Teams bots",
+      "AI-assisted quality inspection logging app"
+    ]
+  },
+  "hobby": {
+    "title": "What we're building for fun",
+    "weather": "Weather widget — coming soon.",
+    "next": "What next? Propose an idea."
+  },
+  "form": {
+    "title": "Propose an app",
+    "body": "If we like your idea, you’ll get free access."
+  }
+}
