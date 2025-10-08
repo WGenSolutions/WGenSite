@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Menu, X, ArrowUpRight } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import clsx from 'classnames'
 import LanguageSwitcher from './LanguageSwitcher'
 
@@ -13,6 +13,20 @@ interface HeaderProps {
 export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps) => {
   const { t } = useTranslation('common')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [hasScrolled, setHasScrolled] = useState(false)
+
+  useEffect(() => {
+    const updateScrollState = () => {
+      setHasScrolled(window.scrollY > 0)
+    }
+
+    updateScrollState()
+    window.addEventListener('scroll', updateScrollState, { passive: true })
+
+    return () => {
+      window.removeEventListener('scroll', updateScrollState)
+    }
+  }, [])
 
   const handleNavClick = (sectionId?: string) => {
     if (sectionId) {
@@ -23,10 +37,15 @@ export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps
 
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-white/15 bg-background/80 header-blur">
-      <div className="mx-auto flex w-full items-center justify-between gap-4 px-6 py-4 sm:px-10 max-w-none lg:max-w-none">
+      <div
+        className={clsx(
+          'mx-auto flex w-full items-center justify-between gap-4 px-6 sm:px-10 max-w-none lg:max-w-none transition-all duration-300',
+          hasScrolled ? 'py-4' : 'py-6 sm:py-8',
+        )}
+      >
         <a
           href="#hero"
-          className="flex shrink-0 items-center gap-3 rounded-xl text-left"
+          className="flex shrink-0 items-center gap-3 rounded-xl text-left transition-all duration-300"
           aria-label={t('brand.name', { defaultValue: 'WGen' })}
           onClick={() => handleNavClick()}
         >
@@ -43,7 +62,10 @@ export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps
             <img
               src="/logo.svg"
               alt="WGen logo"
-              className="h-12 w-auto sm:h-14 rounded-xl relative z-10"
+              className={clsx(
+                'w-auto rounded-xl relative z-10 transition-all duration-300',
+                hasScrolled ? 'h-12 sm:h-14' : 'h-16 sm:h-20',
+              )}
             />
           </span>
         </a>
