@@ -40,7 +40,7 @@ export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps
       <div
         className={clsx(
           'mx-auto flex w-full items-center justify-between gap-4 px-6 sm:px-10 max-w-none lg:max-w-none transition-all duration-300',
-          hasScrolled ? 'py-4' : 'py-6 sm:py-8',
+          hasScrolled ? 'py-2' : 'py-2 sm:py-3',
         )}
       >
         <a
@@ -70,7 +70,7 @@ export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps
           </span>
         </a>
 
-        <nav className="hidden md:flex md:flex-wrap items-center gap-2 md:gap-3" aria-label="Main navigation">
+        <nav className="hidden md:flex md:flex-wrap items-center" aria-label="Main navigation">
           {sections.map((section) => (
             <a
               key={section.id}

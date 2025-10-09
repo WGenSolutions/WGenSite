@@ -46,7 +46,7 @@ export const Footer = () => {
 
         <div className="flex flex-col gap-4 text-foreground sm:flex-row sm:items-center">
           <div className="flex items-center gap-3">
-            <LanguageSwitcher />
+
           </div>
         </div>
       </div>
