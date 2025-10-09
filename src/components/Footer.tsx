@@ -41,24 +41,12 @@ export const Footer = () => {
             <a href="#" className="hover:text-foreground" aria-label={t('footer.privacy')}>
               {t('footer.privacy')}
             </a>
-            <a href="#" className="hover:text-foreground" aria-label={t('footer.imprint')}>
-              {t('footer.imprint')}
-            </a>
           </div>
         </div>
 
         <div className="flex flex-col gap-4 text-foreground sm:flex-row sm:items-center">
           <div className="flex items-center gap-3">
             <LanguageSwitcher />
-          </div>
-          <div className="flex items-center gap-4 text-muted">
-            <span className="font-medium">{t('footer.social')}</span>
-            <a href="#" className="hover:text-foreground" aria-label={t('footer.linkedin')}>
-              {t('footer.linkedin')}
-            </a>
-            <a href="#" className="hover:text-foreground" aria-label={t('footer.github')}>
-              {t('footer.github')}
-            </a>
           </div>
         </div>
       </div>

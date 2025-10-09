@@ -70,21 +70,21 @@ export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps
           </span>
         </a>
 
-        <nav className="hidden items-center gap-0 md:flex" aria-label="Main navigation">
+        <nav className="hidden md:flex md:flex-wrap items-center gap-2 md:gap-3" aria-label="Main navigation">
           {sections.map((section) => (
             <a
               key={section.id}
               href={`#${section.id}`}
               onClick={() => handleNavClick(section.id)}
               className={clsx(
-                'rounded-full px-5 py-2 text-[0.75rem] font-semibold uppercase tracking-[0.2em] font-display transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 lg:text-[0.8rem] lg:px-6',
-                activeSection === section.id
-                  ? 'bg-primary/20 text-primary'
-                  : 'text-muted hover:text-foreground',
+          'rounded-full px-5 py-2 text-[0.75rem] font-semibold uppercase tracking-[0.2em] font-display transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/30 lg:text-[0.8rem] lg:px-6',
+          activeSection === section.id
+            ? 'bg-primary/20 text-primary'
+            : 'text-muted hover:text-foreground',
               )}
             >
               <span className="relative inline-flex items-center gap-1">
-                {section.label}
+          {section.label}
               </span>
             </a>
           ))}
