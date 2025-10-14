@@ -51,19 +51,16 @@
     "focus": "Recently we have doubled down on office and production automations built with our proprietary Automation Center platform."
   },
   "about": {
-    "title": "About us",
-    "paragraphs": [
-      "We are a small, fast-moving team of passionate developers ready to put in odd hours to ship faster.",
-      "Many companies rely on Excel — we help automate the relationships between sheets and systems.",
-      "We leverage AI tools to build high-quality products quickly while keeping humans in control.",
-      "Our differentiator: the simplest projects delivered within 24 hours."
-    ],
-    "cta": "Selected apps we've built",
-    "apps": [
-      "Production status cockpit with shop-floor tablets",
-      "Global spare parts ordering portal integrated with ERP",
-      "HR 360° feedback workflow with Slack and Teams bots",
-      "AI-assisted quality inspection logging app"
+    "title": "About Us",
+    "intro": "We're a small but highly dedicated team of passionate developers. We deliver fast, reliable, and high-quality solutions for web design, custom applications, and business automation.",
+    "highlightTitle": "What sets us apart?",
+    "highlights": [
+      { "id": "speed", "text": "Simplest projects can be ready in just 24 hours" },
+      { "id": "value", "text": "We are best programmers. Not the most expensive" },
+      { "id": "ai", "text": "We use AI tools to speed up development without compromising quality" },
+      { "id": "commitment", "text": "We're always ready to skip the latest episode of our favorite show — just to make sure your product is ready ASAP" },
+      { "id": "automation", "text": "We help companies move beyond Excel sheets and into smarter, scalable solutions" },
+      { "id": "widget", "text": "Need widget for your company data? We will design one for you" }
     ]
   },
   "hobby": {

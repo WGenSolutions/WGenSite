@@ -52,18 +52,15 @@
   },
   "about": {
     "title": "O nas",
-    "paragraphs": [
-      "Jesteśmy małym, zwinnym zespołem pasjonatów developmentu, gotowym pracować niestandardowo, by dostarczyć szybciej.",
-      "Wiele firm żyje w Excelu — automatyzujemy powiązania między arkuszami i systemami.",
-      "Wykorzystujemy narzędzia AI, by dostarczać szybciej, zachowując wysoką jakość.",
-      "Nasza przewaga: najprostsze projekty dowozimy w 24 godziny."
-    ],
-    "cta": "Wybrane aplikacje, które stworzyliśmy",
-    "apps": [
-      "Kokpit statusów produkcji na tabletach dla hali",
-      "Globalny portal zamówień części zamiennych zintegrowany z ERP",
-      "Proces ocen 360° z botami Slack i Teams",
-      "Aplikacja do logowania kontroli jakości wspierana przez AI"
+    "intro": "Jesteśmy małym, ale niezwykle oddanym zespołem pasjonatów developmentu. Dostarczamy szybkie, niezawodne i wysokiej jakości rozwiązania z zakresu projektowania stron, aplikacji dedykowanych oraz automatyzacji biznesu.",
+    "highlightTitle": "Co nas wyróżnia?",
+    "highlights": [
+      { "id": "speed", "text": "Najprostsze projekty mogą być gotowe w zaledwie 24 godziny" },
+      { "id": "value", "text": "Jesteśmy świetnymi programistami. Nie najdroższymi" },
+      { "id": "ai", "text": "Wykorzystujemy narzędzia AI, by przyspieszyć development bez kompromisów jakości" },
+      { "id": "commitment", "text": "Jesteśmy gotowi odpuścić nowy odcinek ulubionego serialu, by Twoje rozwiązanie było gotowe jak najszybciej" },
+      { "id": "automation", "text": "Pomagamy firmom wyjść poza arkusze Excela i przejść do sprytniejszych, skalowalnych rozwiązań" },
+      { "id": "widget", "text": "Potrzebujesz widgetu do danych firmy? Zaprojektujemy go dla Ciebie" }
     ]
   },
   "hobby": {
