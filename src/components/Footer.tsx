@@ -37,11 +37,6 @@ export const Footer = () => {
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 sm:flex-row sm:items-center sm:justify-between sm:px-10">
         <div className="flex flex-col gap-2 text-muted">
           <p>{t('footer.rights', { year: new Date().getFullYear() })}</p>
-          <div className="flex flex-wrap gap-4 text-foreground/70">
-            <a href="#" className="hover:text-foreground" aria-label={t('footer.privacy')}>
-              {t('footer.privacy')}
-            </a>
-          </div>
         </div>
 
         <div className="flex flex-col gap-4 text-foreground sm:flex-row sm:items-center">

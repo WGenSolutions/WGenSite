@@ -66,6 +66,7 @@
   },
   "hobby": {
     "title": "What we're building for fun",
+    "widgetAlt": "WG Weather widget logo",
     "weather": "Weather widget — coming soon.",
     "next": "What next? Propose an idea."
   },

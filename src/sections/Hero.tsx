@@ -109,18 +109,6 @@ export const Hero = () => {
               transition={{ duration: 2.8, repeat: Infinity, ease: 'easeInOut' }}
             />
           </a>
-          <a
-            href="#propose"
-            className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-primary/40 bg-background/70 px-6 py-3 text-base font-semibold text-primary transition-all duration-300 hover:border-primary hover:bg-background/90 hover:text-foreground"
-          >
-            <span className="relative z-10 inline-flex items-center gap-2">
-              {t('hero.secondaryCta')}
-            </span>
-            <span
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(92,109,253,0.25),_transparent_70%)] opacity-0 transition-opacity duration-300 group-hover:opacity-90"
-              aria-hidden="true"
-            />
-          </a>
         </motion.div>
       </div>
     </section>

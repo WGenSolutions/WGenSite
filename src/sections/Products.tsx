@@ -57,12 +57,6 @@ export const Products = () => {
           </motion.li>
         ))}
           </ul>
-          <a
-        href="#propose"
-        className="inline-flex w-fit items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:bg-primary/90"
-          >
-        {t('products.automationCenter.cta')}
-          </a>
         </div>
       </motion.div>
     </Section>

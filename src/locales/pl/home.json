@@ -66,6 +66,7 @@
   },
   "hobby": {
     "title": "Co budujemy po godzinach",
+    "widgetAlt": "Logo widgetu pogodowego WG",
     "weather": "Widget pogodowy — wkrótce.",
     "next": "Co dalej? Zaproponuj pomysł."
   },
