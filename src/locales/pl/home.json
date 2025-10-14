@@ -35,14 +35,15 @@
     "title": "Produkty",
     "automationCenter": {
       "headline": "Automation Center",
-      "description": "Nasza platforma do orkiestracji automatyzacji biurowych i produkcyjnych.",
+      "description": "Autorska platforma do orkiestracji automatyzacji biurowych i produkcyjnych.",
       "features": [
-        "Graficzny projektant procesów z modułami wielokrotnego użycia",
-        "Monitoring w czasie rzeczywistym i akceptacje z udziałem ludzi",
-        "Integracje z ERP, MES, arkuszami, komunikatorami i systemami własnymi",
-        "Wdrożenia on-premise lub w chmurze z granularnymi uprawnieniami"
-      ],
-      "cta": "Umów demo"
+          "Zawiera zadania, narzędzia i agentów do tworzenia złożonych automatyzacji",
+          "Oferuje konfigurowalną i dynamiczną wizualizację procesów oraz zależności",
+          "Pozwala automatycznie generować kod z wykorzystaniem sztucznej inteligencji",
+          "Obsługuje wdrożenia lokalne i w chmurze z pełną kontrolą dostępu",
+          "Umożliwia szybkie tworzenie i uruchamianie automatyzacji",
+          "Nie jest to rozwiązanie typu no-code – dlatego zapewnia pełną swobodę i praktycznie nieograniczone możliwości"
+        ]
     }
   },
   "experience": {

@@ -35,14 +35,15 @@
     "title": "Products",
     "automationCenter": {
       "headline": "Automation Center",
-      "description": "Our platform for orchestrating office and production automations.",
+      "description": "Our custom platform for orchestrating office and production automations.",
       "features": [
-        "Visual workflow designer with reusable building blocks",
-        "Real-time monitoring and human-in-the-loop approvals",
-        "Connects ERP, MES, sheets, chat, and custom systems",
-        "Deploys on-prem or cloud with granular access control"
-      ],
-      "cta": "Book a walkthrough"
+        "Includes jobs, tools, and agents for building complex automation workflows",
+        "Offers customizable and dynamic visualization of processes and relationships",
+        "Enables automated code generation powered by artificial intelligence",
+        "Supports on-premises and cloud deployments with full access control",
+        "Allows rapid creation and execution of automation tasks",
+        "Not a no-code solution – providing full flexibility and virtually unlimited possibilities"
+      ]
     }
   },
   "experience": {
