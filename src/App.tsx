@@ -8,7 +8,7 @@ import Products from './sections/Products'
 import Experience from './sections/Experience'
 import About from './sections/About'
 import Hobby from './sections/Hobby'
-import ProposeForm from './sections/ProposeForm'
+import Contact from './sections/Contact'
 import AuroraBackground from './components/AuroraBackground'
 import { useActiveSection } from './hooks/useActiveSection'
 
@@ -18,7 +18,7 @@ const SECTION_IDS = [
   'experience',
   'about',
   'hobby',
-  'propose',
+  'contact',
 ] as const
 
 type SectionId = (typeof SECTION_IDS)[number]
@@ -67,15 +67,15 @@ function App() {
         activeSection={activeSection}
         onSectionSelect={(sectionId) => setActiveSection(sectionId)}
       />
-      <main className="relative z-10 flex flex-col gap-20 pb-24">      
-        <AuroraBackground />        
+      <main className="relative z-10 flex flex-col gap-20 pb-24">
+        <AuroraBackground />
         <Hero />
         <Offer />
         <Products />
         <Experience />
         <About />
         <Hobby />
-        <ProposeForm />
+        <Contact />
       </main>
       <Footer />
     </div>

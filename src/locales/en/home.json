@@ -3,7 +3,7 @@
     "title": "Build better, faster.",
     "subtitle": "From one-page sites to complex apps and process automation, we deliver thoughtfully engineered solutions.",
     "primaryCta": "Explore our offer",
-    "secondaryCta": "Propose an app"
+    "secondaryCta": "Contact us"
   },
   "offer": {
     "title": "Offer",
@@ -168,10 +168,19 @@
     "title": "What we're building for fun",
     "widgetAlt": "WG Weather widget logo",
     "weather": "Weather widget — coming soon.",
-    "next": "What next? Propose an idea."
+    "next": "What next? Let's talk."
   },
-  "form": {
-    "title": "Propose an app",
-    "body": "If we like your idea, you’ll get free access."
+  "contact": {
+    "title": "Contact",
+    "body": "Share a few lines about your challenge and we'll come back with next steps.",
+    "emailLabel": "Email us at",
+    "cta": "Start an email",
+    "responseTime": "We usually reply within one business day.",
+    "points": [
+      "Outline the product, automation, or site you want to build.",
+      "Mention timelines, stakeholders, and integrations that matter.",
+  "Prefer async? Send a few bullet points and we'll follow up with a plan."
+    ],
+    "imageAlt": "Team collaborating remotely on a digital project."
   }
 }

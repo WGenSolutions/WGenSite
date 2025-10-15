@@ -3,7 +3,7 @@
     "title": "Buduj lepiej, szybciej.",
     "subtitle": "Od stron wizytówek po złożone aplikacje i automatyzację procesów – dostarczamy przemyślane rozwiązania.",
     "primaryCta": "Poznaj naszą ofertę",
-    "secondaryCta": "Zaproponuj aplikację"
+  "secondaryCta": "Skontaktuj się z nami"
   },
   "offer": {
     "title": "Oferta",
@@ -168,10 +168,19 @@
     "title": "Co budujemy po godzinach",
     "widgetAlt": "Logo widgetu pogodowego WG",
     "weather": "Widget pogodowy — wkrótce.",
-    "next": "Co dalej? Zaproponuj pomysł."
+    "next": "Co dalej? Porozmawiajmy."
   },
-  "form": {
-    "title": "Zaproponuj aplikację",
-    "body": "Jeśli pomysł nam się spodoba, otrzymasz darmowy dostęp."
+  "contact": {
+    "title": "Kontakt",
+    "body": "Napisz kilka zdań o swoim wyzwaniu, a wrócimy z kolejnymi krokami.",
+    "emailLabel": "Napisz do nas na",
+    "cta": "Wyślij e-mail",
+    "responseTime": "Odpowiadamy zwykle w jeden dzień roboczy.",
+    "points": [
+      "Opisz produkt lub automatyzację, którą chcesz zbudować.",
+      "Wspomnij o terminach, interesariuszach i integracjach.",
+      "Wolisz asynchronicznie? Wyślij kilka punktów, a my zaproponujemy plan."
+    ],
+    "imageAlt": "Ilustracja zespołu współpracującego zdalnie nad projektem."
   }
 }
