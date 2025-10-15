@@ -48,8 +48,108 @@
   },
   "experience": {
     "title": "Experience",
-    "body": "Over the years we've partnered with manufacturing, logistics, and service companies to deliver scalable, easy-to-use products: production management and line communication tools, production planning suites, warehouse operations dashboards, cross-platform mobile apps, employee evaluation portals, lunch ordering systems, and many more.",
-    "focus": "Recently we have doubled down on office and production automations built with our proprietary Automation Center platform."
+    "body": "We help companies digitise their operations - connecting the shop floor, office, and leadership teams with one data flow. We build tailor-made solutions and platforms that integrate multiple departments.",
+    "projects": {
+      "headline": "Selected projects",
+      "items": [
+        {
+          "id": "vanSalesApp",
+          "title": "Van-sales companion app",
+          "description": "Mobile van-seller toolkit with inventory, promos, and order capture offline."
+        },
+        {
+          "id": "productionMonitor",
+          "title": "Production monitor",
+          "description": "Real-time shop-floor view aggregating line data and quality alerts."
+        },
+        {
+          "id": "productionPlanning",
+          "title": "Production planning",
+          "description": "Scheduling suite with load simulations and visual shift timelines."
+        },
+        {
+          "id": "productionDashboards",
+          "title": "Production dashboards",
+          "description": "Live OEE, KPI, and machine status dashboards with instant updates."
+        },
+        {
+          "id": "workforceManagement",
+          "title": "Workforce management",
+          "description": "One console for shifts, attendance, and competency planning."
+        },
+        {
+          "id": "employeeEvaluation",
+          "title": "Employee evaluation",
+          "description": "Digital 360 feedback and growth path reviews for teams."
+        },
+        {
+          "id": "warehouseOps",
+          "title": "Warehouse operations",
+          "description": "Inbound, outbound, and stock audits with WMS integrations."
+        },
+        {
+          "id": "officeAutomations",
+          "title": "Office automations",
+          "description": "RPA bots and AI agents relieving administrative workload."
+        },
+        {
+          "id": "mobileApps",
+          "title": "Corporate mobile apps",
+          "description": "Dedicated mobile apps for reporting, service, and field requests."
+        },
+        {
+          "id": "documentFlow",
+          "title": "Document flow",
+          "description": "Electronic approvals with compliance-ready document trails."
+        },
+        {
+          "id": "b2bPlatforms",
+          "title": "B2B communication platforms",
+          "description": "Portals that connect suppliers and customers with shared data."
+        },
+        {
+          "id": "feedbackOps",
+          "title": "Feedback management",
+          "description": "Collect insights from shop-floor, hotlines, and outlets in one place."
+        },
+        {
+          "id": "ecommerce",
+          "title": "E-commerce platform",
+          "description": "Online stores synchronised with production and inventory."
+        },
+        {
+          "id": "gatehouseOps",
+          "title": "Gatehouse control",
+          "description": "Visitor management with access control and time tracking."
+        },
+        {
+          "id": "productionPrepAutomation",
+          "title": "Production prep automation",
+          "description": "Automated generation of production docs and material packs."
+        },
+        {
+          "id": "shippingOps",
+          "title": "Shipping operations",
+          "description": "Shipping panel with labels, tracking, and carrier integrations."
+        },
+        {
+          "id": "lunchOrdering",
+          "title": "E-lunch ordering",
+          "description": "Meal ordering platform with benefit settlements built in."
+        },
+        {
+          "id": "analytics",
+          "title": "Reports and analytics",
+          "description": "Advanced reports, visualisations, and governance alerts."
+        },
+        {
+          "id": "crm",
+          "title": "CRM",
+          "description": "Customer relationship management tailored to your sales cycle."
+        }
+      ]
+    },
+    "focus": "We currently double-down on office and production automations powered by our Automation Center platform."
   },
   "about": {
     "title": "About Us",
