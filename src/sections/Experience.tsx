@@ -166,7 +166,7 @@ export const Experience = () => {
         variants: listVariants,
         initial: 'hidden' as const,
         whileInView: 'show' as const,
-        viewport: { once: true, amount: 0.25 }
+        viewport: { once: true, amount: 0.15 }
       }
 
   return (
@@ -175,7 +175,7 @@ export const Experience = () => {
         className="space-y-8 rounded-3xl bg-background/80 p-8 ring-1 ring-inset ring-white/10"
         initial={prefersReducedMotion ? undefined : { opacity: 0, y: 24 }}
         whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.6, ease: [0.24, 0.8, 0.25, 1] as const }}
       >
         <div className="space-y-4">

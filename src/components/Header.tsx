@@ -49,7 +49,7 @@ export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps
           aria-label={t('brand.name', { defaultValue: 'WGen' })}
           onClick={() => handleNavClick()}
         >
-          <span className="relative flex items-center">
+          <span className="relative flex items-center logo-shine">
             <span
               className="absolute inset-0 rounded-xl pointer-events-none"
               style={{

@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
  * Animated diagram (Vite-style) to visualize:
  * Shop Floor <-> Office <-> Management
  */
-function Diagram({ reduced }: { reduced: boolean }) {
+function Diagram({ reduced, className = '' }: { reduced: boolean; className?: string }) {
   const { t } = useTranslation('home');
 
   const A = { x: 90,  y: 130, label: t('nodes.labelShopFloor') }
@@ -25,7 +25,7 @@ function Diagram({ reduced }: { reduced: boolean }) {
 
   return (
     <div
-      className="relative mx-auto w-full max-w-5xl overflow-visible bg-background/40 p-4 sm:p-6"
+      className={`relative mx-auto w-full max-w-[520px] overflow-visible bg-background/40 p-4 sm:p-6 md:ml-auto ${className}`}
       aria-label="Information flow between shop floor, office, and management"
     >
       {/* Soft gradient background blobs */}
@@ -202,12 +202,12 @@ export const Hero = () => {
         aria-hidden="true"
       />
 
-      <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-6 text-center sm:gap-10 sm:px-10 md:text-left">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 text-center sm:gap-12 sm:px-10 md:flex-row md:items-center md:text-left">
         <motion.div
           initial={prefersReducedMotion ? undefined : { opacity: 0, y: 32 }}
           animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
-          className="flex flex-col gap-6"
+          className="flex flex-1 flex-col gap-6"
         >
           <span className="self-start rounded-full border border-white/10 bg-background/60 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
             {t2('brand.tagline')}
@@ -224,13 +224,13 @@ export const Hero = () => {
         </motion.div>
 
         <motion.div
-          className="flex flex-col gap-4 sm:flex-row sm:items-center"
+          className="flex w-full flex-1 justify-center md:justify-end"
           initial={prefersReducedMotion ? undefined : { opacity: 0, y: 32 }}
           animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] as const }}
         >
           {/* === New: Animated Diagram === */}
-          <Diagram reduced={!!prefersReducedMotion} />
+          <Diagram reduced={!!prefersReducedMotion} className="md:mr-0" />
         </motion.div>
       </div>
     </section>
