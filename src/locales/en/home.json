@@ -5,6 +5,11 @@
     "primaryCta": "Explore our offer",
     "secondaryCta": "Contact us"
   },
+  "nodes": {
+    "labelShopFloor": "Shop floor",
+    "labelOffice": "Office",
+    "labelManagement": "Management"
+  },
   "offer": {
     "title": "Offer",
     "subtitle": "Technology and automation services tailored to ship value at startup speed.",

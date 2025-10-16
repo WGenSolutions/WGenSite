@@ -5,6 +5,11 @@
     "primaryCta": "Poznaj naszą ofertę",
   "secondaryCta": "Skontaktuj się z nami"
   },
+  "nodes": {
+    "labelShopFloor": "Hala produkcyjna",
+    "labelOffice": "Biuro",
+    "labelManagement": "Zarząd"
+  },
   "offer": {
     "title": "Oferta",
     "subtitle": "Technologia i automatyzacje dopasowane, aby szybko dowozić wartość.",
