@@ -1,9 +1,9 @@
 {
   "hero": {
-    "title": "Buduj lepiej, szybciej.",
-    "subtitle": "Od stron wizytówek po złożone aplikacje i automatyzację procesów – dostarczamy przemyślane rozwiązania.",
+    "title": "Buduj lepiej i szybciej.",
+    "subtitle": "Od stron wizytówek po złożone aplikacje i automatyzację procesów — dostarczamy rozwiązania, które mają sens.",
     "primaryCta": "Poznaj naszą ofertę",
-  "secondaryCta": "Skontaktuj się z nami"
+    "secondaryCta": "Skontaktuj się z nami"
   },
   "nodes": {
     "labelShopFloor": "Hala produkcyjna",
@@ -12,27 +12,27 @@
   },
   "offer": {
     "title": "Oferta",
-    "subtitle": "Technologia i automatyzacje dopasowane, aby szybko dowozić wartość.",
+    "subtitle": "Technologia i automatyzacja dopasowane tak, by szybko dostarczać realną wartość.",
     "cards": {
       "websites": {
         "title": "Strony WWW",
-        "body": "Strony wizytówki, one-page, serwisy wielostronicowe i zaawansowane serwisy z modułami na miarę."
+        "body": "Od prostych wizytówek po wielostronicowe serwisy i rozbudowane portale z modułami szytymi na miarę."
       },
       "apps": {
-        "title": "Dedykowane aplikacje",
-        "body": "Aplikacje szyte na miarę Twoich procesów."
+        "title": "Aplikacje dedykowane",
+        "body": "Projektujemy aplikacje stworzone dokładnie pod Twoje procesy biznesowe."
       },
       "automations": {
         "title": "Automatyzacje",
-        "body": "Usprawniamy procesy z naszą platformą Automation Center."
+        "body": "Usprawniamy procesy z pomocą naszej platformy Automation Center."
       },
       "exitExcel": {
         "title": "Koniec z Excelem",
-        "body": "Polegasz na arkuszach? Pomożemy wyjść poza Excela."
+        "body": "Masz firmę opartą na arkuszach? Pomożemy Ci pójść krok dalej — w stronę skalowalnych rozwiązań."
       },
       "widgets": {
         "title": "Widgety i mobile",
-        "body": "Szybki dostęp do danych firmy w ruchu."
+        "body": "Zyskaj szybki dostęp do danych firmy — zawsze i wszędzie."
       }
     }
   },
@@ -40,151 +40,75 @@
     "title": "Produkty",
     "automationCenter": {
       "headline": "Automation Center",
-      "description": "Autorska platforma do orkiestracji automatyzacji biurowych i produkcyjnych.",
+      "description": "Nasza autorska platforma do orkiestracji automatyzacji biurowych i produkcyjnych.",
       "features": [
-          "Zawiera zadania, narzędzia i agentów do tworzenia złożonych automatyzacji",
-          "Oferuje konfigurowalną i dynamiczną wizualizację procesów oraz zależności",
-          "Pozwala automatycznie generować kod z wykorzystaniem sztucznej inteligencji",
-          "Obsługuje wdrożenia lokalne i w chmurze z pełną kontrolą dostępu",
-          "Umożliwia szybkie tworzenie i uruchamianie automatyzacji",
-          "Nie jest to rozwiązanie typu no-code – dlatego zapewnia pełną swobodę i praktycznie nieograniczone możliwości"
-        ]
+        "Zawiera zadania, narzędzia i agentów do budowy złożonych automatyzacji",
+        "Oferuje dynamiczną, konfigurowalną wizualizację procesów i zależności",
+        "Umożliwia automatyczne generowanie kodu z wykorzystaniem sztucznej inteligencji",
+        "Obsługuje wdrożenia lokalne i w chmurze z pełną kontrolą dostępu",
+        "Pozwala błyskawicznie tworzyć i uruchamiać automatyzacje",
+        "Nie jest to rozwiązanie no-code — dzięki temu zapewnia pełną swobodę i praktycznie nieograniczone możliwości"
+      ]
     }
   },
   "experience": {
     "title": "Doświadczenie",
-    "body": "Wspieramy firmy w cyfryzacji procesów - łączymy halę produkcyjną, biuro i zarząd w jednym strumieniu danych. Tworzymy rozwiązania szyte na miarę oraz platformy integrujące wiele działów.",
+    "body": "Wspieramy firmy w cyfryzacji procesów — łączymy halę produkcyjną, biuro i zarząd w jednym strumieniu danych. Tworzymy dedykowane rozwiązania i platformy, które integrują wiele działów w spójnym ekosystemie.",
     "projects": {
       "headline": "Wybrane realizacje",
       "items": [
-        {
-          "id": "vanSalesApp",
-          "title": "Aplikacja dla vansellerów",
-          "description": "Mobilny dostęp do stanów, zamówień i promocji w trasie, także offline."
-        },
-        {
-          "id": "productionMonitor",
-          "title": "Monitor produkcji",
-          "description": "Podgląd w czasie rzeczywistym z danymi z linii i alertami jakościowymi."
-        },
-        {
-          "id": "productionPlanning",
-          "title": "Planowanie produkcji",
-          "description": "Harmonogramy z symulacją obciążenia i wizualizacją zmian."
-        },
-        {
-          "id": "productionDashboards",
-          "title": "Dashboardy produkcyjne",
-          "description": "Tablice wyników OEE, KPI oraz statusów maszyn z aktualizacją na żywo."
-        },
-        {
-          "id": "workforceManagement",
-          "title": "System zarządzania pracownikami",
-          "description": "Planowanie zmian, obecności i kompetencji w jednej konsoli."
-        },
-        {
-          "id": "employeeEvaluation",
-          "title": "Ewaluacja pracowników",
-          "description": "Cyfrowe arkusze ocen 360 i ścieżki rozwojowe zespołów."
-        },
-        {
-          "id": "warehouseOps",
-          "title": "Obsługa magazynu",
-          "description": "Przyjęcia, wydania i inwentaryzacje z integracją WMS."
-        },
-        {
-          "id": "officeAutomations",
-          "title": "Automatyzacje biurowe",
-          "description": "Roboty RPA i agenci AI odciążający zespoły administracyjne."
-        },
-        {
-          "id": "mobileApps",
-          "title": "Firmowe aplikacje mobilne",
-          "description": "Dedykowane aplikacje do zgłoszeń, raportów i serwisu w terenie."
-        },
-        {
-          "id": "documentFlow",
-          "title": "Obieg dokumentów",
-          "description": "Elektroniczny obieg z akceptacjami i zgodnością prawną."
-        },
-        {
-          "id": "b2bPlatforms",
-          "title": "Platformy B2B",
-          "description": "Portale wspierające dostawców i klientów w wymianie danych."
-        },
-        {
-          "id": "feedbackOps",
-          "title": "Obsługa feedbacków",
-          "description": "System zbierania opinii z hal, infolinii i sieci sprzedaży."
-        },
-        {
-          "id": "ecommerce",
-          "title": "Sklep internetowy",
-          "description": "Platformy sprzedażowe powiązane z magazynem i produkcją."
-        },
-        {
-          "id": "gatehouseOps",
-          "title": "Obsługa portierni",
-          "description": "Rejestr wjazdów, kontrola dostępu i monitoring czasu."
-        },
-        {
-          "id": "productionPrepAutomation",
-          "title": "Automatyzacja przygotowania produkcji",
-          "description": "Automatyczne generowanie dokumentacji i zestawień materiałowych."
-        },
-        {
-          "id": "shippingOps",
-          "title": "Obsługa wysyłek",
-          "description": "Panel wysyłek z etykietami, trackingiem i integracją kurierów."
-        },
-        {
-          "id": "lunchOrdering",
-          "title": "Zamawianie obiadów e-lunch",
-          "description": "Platforma do zamawiania posiłków i rozliczania benefitów."
-        },
-        {
-          "id": "analytics",
-          "title": "Raporty i analizy",
-          "description": "Zaawansowane raporty, wizualizacje i alerty zarządcze."
-        },
-        {
-          "id": "crm",
-          "title": "CRM",
-          "description": "System zarządzania relacjami dostosowany do cyklu sprzedaży."
-        }
+        { "id": "vanSalesApp", "title": "Aplikacja dla vansellerów", "description": "Mobilny dostęp do stanów, zamówień i promocji w trasie — także offline." },
+        { "id": "productionMonitor", "title": "Monitor produkcji", "description": "Podgląd danych z linii produkcyjnej w czasie rzeczywistym i alerty jakościowe." },
+        { "id": "productionPlanning", "title": "Planowanie produkcji", "description": "Harmonogramy z wizualizacją zmian i symulacją obciążenia." },
+        { "id": "productionDashboards", "title": "Dashboardy produkcyjne", "description": "Tablice OEE, KPI i statusy maszyn z aktualizacją na żywo." },
+        { "id": "workforceManagement", "title": "Zarządzanie pracownikami", "description": "Planowanie zmian, obecności i kompetencji w jednej konsoli." },
+        { "id": "employeeEvaluation", "title": "Ewaluacja pracowników", "description": "Cyfrowe arkusze ocen 360 i ścieżki rozwojowe zespołów." },
+        { "id": "warehouseOps", "title": "Obsługa magazynu", "description": "Przyjęcia, wydania i inwentaryzacje z integracją systemów WMS." },
+        { "id": "officeAutomations", "title": "Automatyzacje biurowe", "description": "Roboty RPA i agenci AI odciążający zespoły administracyjne." },
+        { "id": "mobileApps", "title": "Firmowe aplikacje mobilne", "description": "Aplikacje do zgłoszeń, raportów i obsługi serwisu w terenie." },
+        { "id": "documentFlow", "title": "Obieg dokumentów", "description": "Elektroniczny obieg z akceptacjami i zgodnością prawną." },
+        { "id": "b2bPlatforms", "title": "Platformy B2B", "description": "Portale wspierające wymianę danych z dostawcami i klientami." },
+        { "id": "feedbackOps", "title": "Obsługa feedbacków", "description": "System zbierania opinii z hal, infolinii i sieci sprzedaży." },
+        { "id": "ecommerce", "title": "Sklep internetowy", "description": "Platformy e-commerce zintegrowane z magazynem i produkcją." },
+        { "id": "gatehouseOps", "title": "Obsługa portierni", "description": "Rejestr wjazdów, kontrola dostępu i monitoring czasu." },
+        { "id": "productionPrepAutomation", "title": "Automatyzacja przygotowania produkcji", "description": "Automatyczne generowanie dokumentacji i zestawień materiałowych." },
+        { "id": "shippingOps", "title": "Obsługa wysyłek", "description": "Panel wysyłek z etykietami, trackingiem i integracją kurierów." },
+        { "id": "lunchOrdering", "title": "Zamawianie obiadów e-lunch", "description": "Platforma do zamawiania posiłków i rozliczania benefitów." },
+        { "id": "analytics", "title": "Raporty i analizy", "description": "Zaawansowane raporty, wizualizacje i alerty zarządcze." },
+        { "id": "crm", "title": "CRM", "description": "System zarządzania relacjami dopasowany do Twojego procesu sprzedaży." }
       ]
     },
-    "focus": "Ostatnio szczególnie koncentrujemy się na automatyzacjach biurowych i produkcyjnych budowanych na naszej platformie Automation Center."
+    "focus": "W ostatnim czasie szczególnie koncentrujemy się na automatyzacjach biurowych i produkcyjnych tworzonych w naszej platformie Automation Center."
   },
   "about": {
     "title": "O nas",
-    "intro": "Jesteśmy małym, ale niezwykle oddanym zespołem pasjonatów developmentu. Dostarczamy szybkie, niezawodne i wysokiej jakości rozwiązania z zakresu projektowania stron, aplikacji dedykowanych oraz automatyzacji biznesu.",
+    "intro": "Jesteśmy niewielkim, ale niezwykle zaangażowanym zespołem pasjonatów technologii. Dostarczamy szybkie, niezawodne i wysokiej jakości rozwiązania z zakresu stron internetowych, aplikacji dedykowanych oraz automatyzacji biznesu.",
     "highlightTitle": "Co nas wyróżnia?",
     "highlights": [
-      { "id": "speed", "text": "Najprostsze projekty mogą być gotowe w zaledwie 24 godziny" },
-      { "id": "value", "text": "Jesteśmy świetnymi programistami. Nie najdroższymi" },
-      { "id": "ai", "text": "Wykorzystujemy narzędzia AI, by przyspieszyć development bez kompromisów jakości" },
-      { "id": "commitment", "text": "Jesteśmy gotowi odpuścić nowy odcinek ulubionego serialu, by Twoje rozwiązanie było gotowe jak najszybciej" },
-      { "id": "automation", "text": "Pomagamy firmom wyjść poza arkusze Excela i przejść do sprytniejszych, skalowalnych rozwiązań" },
-      { "id": "widget", "text": "Potrzebujesz widgetu do danych firmy? Zaprojektujemy go dla Ciebie" }
+      { "id": "speed", "text": "Najprostsze projekty realizujemy nawet w 24 godziny." },
+      { "id": "value", "text": "Świetni programiści, rozsądne stawki." },
+      { "id": "ai", "text": "Wykorzystujemy narzędzia AI, by przyspieszyć development bez kompromisów jakości." },
+      { "id": "commitment", "text": "Zdarza nam się odłożyć nowy odcinek ulubionego serialu, żeby Twoje rozwiązanie było gotowe szybciej." },
+      { "id": "automation", "text": "Pomagamy firmom wyjść poza Excela i przejść do sprytniejszych, skalowalnych rozwiązań." },
+      { "id": "widget", "text": "Potrzebujesz firmowego widgetu? Zaprojektujemy go dla Ciebie." }
     ]
   },
   "hobby": {
     "title": "Co budujemy po godzinach",
     "widgetAlt": "Logo widgetu pogodowego WG",
-    "weather": "Widget pogodowy — wkrótce.",
+    "weather": "Widget pogodowy — już wkrótce.",
     "next": "Co dalej? Porozmawiajmy."
   },
   "contact": {
     "title": "Kontakt",
-    "body": "Napisz kilka zdań o swoim wyzwaniu, a wrócimy z kolejnymi krokami.",
+    "body": "Opisz krótko swoje wyzwanie, a wrócimy z kolejnymi krokami.",
     "emailLabel": "Napisz do nas na",
     "cta": "Wyślij e-mail",
-    "responseTime": "Odpowiadamy zwykle w jeden dzień roboczy.",
+    "responseTime": "Odpowiadamy zazwyczaj w jeden dzień roboczy.",
     "points": [
-      "Opisz produkt lub automatyzację, którą chcesz zbudować.",
-      "Wspomnij o terminach, interesariuszach i integracjach.",
-      "Wolisz asynchronicznie? Wyślij kilka punktów, a my zaproponujemy plan."
+      "Opisz produkt lub automatyzację, którą chcesz stworzyć.",
+      "Dodaj informacje o terminach, interesariuszach i integracjach.",
+      "Wolisz asynchronicznie? Prześlij kilka punktów, a my przygotujemy plan działania."
     ],
     "imageAlt": "Ilustracja zespołu współpracującego zdalnie nad projektem."
   }
