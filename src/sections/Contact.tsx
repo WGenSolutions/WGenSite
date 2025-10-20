@@ -22,7 +22,7 @@ export const Contact = () => {
           className="space-y-6"
           initial={prefersReducedMotion ? undefined : { opacity: 0, y: 24 }}
           whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
+          viewport={{ once: true, amount: 0.12 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
         >
           <div className="grid gap-3 text-base text-muted">
@@ -53,7 +53,7 @@ export const Contact = () => {
             className="inline-flex w-full max-w-xs items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-semibold text-white shadow-glow transition hover:bg-primary/90"
             initial={prefersReducedMotion ? undefined : { opacity: 0, y: 24 }}
             whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.12 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] as const }}
           >
             <Mail className="h-5 w-5" aria-hidden="true" />
@@ -66,7 +66,7 @@ export const Contact = () => {
           initial={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.95 }}
           whileInView={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
           animate={prefersReducedMotion ? undefined : { y: [0, -12, 0], rotate: [0, 1.2, 0] }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.12 }}
           transition={
             prefersReducedMotion
               ? undefined

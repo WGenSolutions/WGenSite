@@ -59,7 +59,7 @@ export const About = () => {
         className="grid gap-10 rounded-3xl border border-white/10 bg-card/80 p-8 shadow-glow md:grid-cols-[minmax(0,1fr),minmax(0,1.1fr)]"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.12 }}
         variants={containerVariants}
       >
         <div className="space-y-6 rounded-3xl border border-white/5 bg-background/70 p-6 shadow-inner">

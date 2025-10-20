@@ -13,7 +13,7 @@ export const Hobby = () => {
         className="grid gap-6 rounded-3xl border border-accent/40 bg-background/70 p-8 md:grid-cols-[minmax(0,260px)_1fr] md:items-center"
         initial={prefersReducedMotion ? undefined : { opacity: 0, y: 24 }}
         whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={{ once: true, amount: 0.12 }}
         transition={{ duration: 0.5, ease: [0.24, 0.8, 0.25, 1] as const }}
       >
         <div className="flex justify-center">

@@ -22,7 +22,7 @@ export const Section = ({
     : {
         initial: { opacity: 0, y: 24 },
         whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true, amount: 0.2 },
+        viewport: { once: true, amount: 0.1 },
         transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] as const },
       }
 
@@ -39,7 +39,7 @@ export const Section = ({
         className="pointer-events-none absolute inset-x-[-10%] top-16 -z-10 h-40 rounded-full bg-[radial-gradient(circle_at_center,_rgba(92,109,253,0.18),_transparent_70%)] blur-3xl transition-opacity duration-700 group-hover/section:opacity-100"
         initial={prefersReducedMotion ? { opacity: 0.25, scale: 0.95 } : { opacity: 0, scale: 0.9 }}
         whileInView={prefersReducedMotion ? { opacity: 0.35, scale: 1 } : { opacity: 0.65, scale: 1 }}
-        viewport={{ once: true, amount: 0.25 }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] as const }}
         aria-hidden="true"
       />
