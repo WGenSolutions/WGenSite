@@ -59,8 +59,19 @@ button {
 }
 
 .header-blur {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+    /* Fallback: solid/semi-transparent background for browsers without backdrop-filter */
+    background-color: rgba(255, 255, 255, 0.1);
+
+    /* Backdrop blur (modern browsers) */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    /* Optional: helps Safari render the blur more smoothly */
+    will-change: backdrop-filter;
+
+    /* Optional for older browsers: use translucency */
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
 }
 
 .neon-ring {

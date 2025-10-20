@@ -1,7 +1,10 @@
 {
   "meta": {
-    "title": "WGen",
-    "description": "Software | AI Automation | Web Dev"
+    "title": "WGen - AI Automation & Full-Stack Software Studio",
+    "description": "WGen designs and ships custom software, automations, and digital products that help companies move faster with AI-assisted workflows.",
+    "keywords": "AI automation, software development, web applications, product design, WGen Solutions",
+    "ogImageAlt": "WGen team building AI automation dashboards for clients",
+    "twitterHandle": "@WGenSolutions"
   },
   "brand": {
     "name": "WGen",

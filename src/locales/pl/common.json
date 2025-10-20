@@ -1,7 +1,10 @@
 {
   "meta": {
-    "title": "WGen",
-    "description": "Software | Automatyzacja AI | Web Dev"
+    "title": "WGen - AI Automation i Studio Oprogramowania",
+    "description": "WGen tworzy dedykowane oprogramowanie, automatyzacje i produkty cyfrowe, które przyspieszają rozwój firm dzięki AI.",
+    "keywords": "automatyzacja AI, rozwój oprogramowania, aplikacje webowe, projektowanie produktów, WGen Solutions",
+    "ogImageAlt": "Zespół WGen pracuje nad panelami automatyzacji AI dla klientów",
+    "twitterHandle": "@WGenSolutions"
   },
   "brand": {
     "name": "WGen",

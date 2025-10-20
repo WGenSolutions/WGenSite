@@ -11,6 +11,7 @@ import Hobby from './sections/Hobby'
 import Contact from './sections/Contact'
 import AuroraBackground from './components/AuroraBackground'
 import { useActiveSection } from './hooks/useActiveSection'
+import Seo from './components/Seo'
 
 const SECTION_IDS = [
   'offer',
@@ -24,7 +25,7 @@ const SECTION_IDS = [
 type SectionId = (typeof SECTION_IDS)[number]
 
 function App() {
-  const { t, i18n } = useTranslation(['common', 'home'])
+  const { t } = useTranslation(['common', 'home'])
 
   const sections = useMemo(
     () =>
@@ -39,29 +40,13 @@ function App() {
 
   useEffect(() => {
     if (typeof document === 'undefined') return
-    document.title = t('common:meta.title')
-    const description = document.querySelector("meta[name='description']")
-    if (description) {
-      description.setAttribute('content', t('common:meta.description'))
-    }
-    const ogTitle = document.querySelector("meta[property='og:title']")
-    if (ogTitle) {
-      ogTitle.setAttribute('content', t('common:meta.title'))
-    }
-    const ogDescription = document.querySelector("meta[property='og:description']")
-    if (ogDescription) {
-      ogDescription.setAttribute('content', t('common:meta.description'))
-    }
-  }, [t, i18n.language])
-
-  useEffect(() => {
-    if (typeof document === 'undefined') return
     document.documentElement.dataset.theme = 'dark'
     document.documentElement.classList.add('dark')
   }, [])
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
+      <Seo />
       <Header
         sections={sections}
         activeSection={activeSection}

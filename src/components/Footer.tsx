@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next'
 import { motion, useReducedMotion } from 'framer-motion'
-import LanguageSwitcher from './LanguageSwitcher'
 
 export const Footer = () => {
   const { t } = useTranslation('common')
@@ -40,9 +39,30 @@ export const Footer = () => {
         </div>
 
         <div className="flex flex-col gap-4 text-foreground sm:flex-row sm:items-center">
-          <div className="flex items-center gap-3">
-
-          </div>
+          <nav
+            aria-label={t('footer.social')}
+            className="flex items-center gap-3 text-sm font-medium"
+          >
+            <a
+              href="https://www.linkedin.com/company/wgensolutions"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="transition hover:text-primary"
+            >
+              {t('footer.linkedin')}
+            </a>
+            <span aria-hidden="true" className="text-muted">
+              /
+            </span>
+            <a
+              href="https://github.com/WGenSolutions"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="transition hover:text-primary"
+            >
+              {t('footer.github')}
+            </a>
+          </nav>
         </div>
       </div>
     </footer>
