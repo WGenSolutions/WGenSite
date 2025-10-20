@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wgen.example.com/sitemap.xml
