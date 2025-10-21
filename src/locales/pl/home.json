@@ -39,7 +39,7 @@
   "products": {
     "title": "Nasze produkty",
     "automationCenter": {
-      "headline": "Automation Center",
+      "headline": "Centrum Automatyzacji",
       "description": "Autorska platforma do zarządzania i orkiestracji automatyzacji biurowych oraz produkcyjnych — wszystko w jednym miejscu.",
       "features": [
         "Zawiera narzędzia, zadania i agentów umożliwiających tworzenie złożonych procesów automatyzacji",
@@ -78,7 +78,7 @@
         { "id": "crm", "title": "CRM", "description": "System zarządzania relacjami z klientami dopasowany do Twojego procesu sprzedaży." }
       ]
     },
-    "focus": "Obecnie koncentrujemy się na rozwoju automatyzacji biurowych i produkcyjnych realizowanych w naszej platformie Automation Center."
+    "focus": "Obecnie koncentrujemy się na rozwoju automatyzacji biurowych i produkcyjnych realizowanych w naszej platformie Centrum Automatyzacji."
   },
   "about": {
     "title": "O nas",
