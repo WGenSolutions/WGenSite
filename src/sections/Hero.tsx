@@ -214,7 +214,7 @@ export const Hero = () => {
           </span>
           <h1
             id="hero-title"
-            className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl"
+            className="text-4xl tracking-tight text-foreground sm:text-5xl lg:text-6xl"
           >
             {t('hero.title')}
           </h1>

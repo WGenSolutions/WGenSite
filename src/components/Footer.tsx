@@ -44,17 +44,6 @@ export const Footer = () => {
             className="flex items-center gap-3 text-sm font-medium"
           >
             <a
-              href="https://www.linkedin.com/company/wgensolutions"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="transition hover:text-primary"
-            >
-              {t('footer.linkedin')}
-            </a>
-            <span aria-hidden="true" className="text-muted">
-              /
-            </span>
-            <a
               href="https://github.com/WGenSolutions"
               target="_blank"
               rel="noreferrer noopener"

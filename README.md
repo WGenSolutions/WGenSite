@@ -146,4 +146,8 @@ VITE_FORMSPREE_FORM_ID=your-form-id      parserOptions: {
 ## 📘 Credits
 - Logo adapted for this project (`public/logo.svg`).
 - Icons provided by [lucide.dev](https://lucide.dev/).
+
+## 🔧 Configuration updates
+- Define `VITE_GOOGLE_ANALYTICS_ID` in your environment to enable the Google Analytics script injected by the SEO component.
+- Publish an SPF record for `wgen.it` (for example: `v=spf1 include:_spf.google.com ~all`) to protect outbound mail from spoofing before sending from `hello@wgen.it`.
 ````

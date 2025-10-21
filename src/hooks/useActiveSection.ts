@@ -14,7 +14,7 @@ interface Options {
 
 export const useActiveSection = (
   sectionIds: readonly string[],
-  { triggerRatio = 0.35, initialSection }: Options = {},
+  { triggerRatio = 0.15, initialSection }: Options = {},
 ) => {
   const fallbackSection = initialSection ?? sectionIds[0] ?? ''
   const [activeSection, setActiveSection] = useState(fallbackSection)

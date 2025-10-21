@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 
-const SITE_URL = 'https://wgen.example.com/'
+const SITE_URL = 'https://wgen.it/'
 const OG_LOCALE: Record<string, string> = {
   en: 'en_US',
   pl: 'pl_PL',
@@ -15,10 +15,9 @@ const SOCIAL_PROFILES = [
   'https://www.linkedin.com/company/wgensolutions',
   'https://github.com/WGenSolutions',
 ]
-
-const DEFAULT_EMAIL = 'hello@wgen.example.com'
-
+const DEFAULT_EMAIL = 'wgen.solutions@gmail.com'
 const sharedImage = `${SITE_URL}images/widget-logo.png`
+const GA_MEASUREMENT_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID
 
 export function Seo() {
   const { t, i18n } = useTranslation(['common'])
@@ -80,6 +79,21 @@ export function Seo() {
       <link rel="alternate" hrefLang="pl" href={ALTERNATE_URLS.pl} />
       <link rel="alternate" hrefLang="x-default" href={SITE_URL} />
       <script type="application/ld+json">{structuredData}</script>
+      {GA_MEASUREMENT_ID ? (
+        <>
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: [
+                'window.dataLayer = window.dataLayer || [];',
+                'function gtag(){dataLayer.push(arguments);}',
+                "gtag('js', new Date());",
+                `gtag('config', '${GA_MEASUREMENT_ID}', { anonymize_ip: true });`,
+              ].join('\n'),
+            }}
+          />
+        </>
+      ) : null}
     </Helmet>
   )
 }

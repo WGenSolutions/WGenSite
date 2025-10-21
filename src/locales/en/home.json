@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Build better, faster.",
-    "subtitle": "From one-page sites to complex apps and process automation, we deliver thoughtfully engineered solutions.",
+    "subtitle": "We design conversion-first web pages, build custom apps, and deliver process automation that helps teams move faster.",
     "primaryCta": "Explore our offer",
     "secondaryCta": "Contact us"
   },
@@ -11,12 +11,12 @@
     "labelManagement": "Management"
   },
   "offer": {
-    "title": "Offer",
-    "subtitle": "Technology and automation services tailored to ship value at startup speed.",
+    "title": "Web page design & digital services",
+    "subtitle": "Human-centred web page design, scalable digital products, and automation services tailored to ship value at startup speed.",
     "cards": {
       "websites": {
-        "title": "Websites",
-        "body": "Business card, one-page, multipage, or advanced dynamic sites with custom modules."
+        "title": "Web page design",
+        "body": "High-performing landing pages, multi-page websites, and modular content systems crafted for clarity, speed, and SEO."
       },
       "apps": {
         "title": "Custom apps",

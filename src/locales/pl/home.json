@@ -1,7 +1,7 @@
 {
   "hero": {
     "title": "Buduj lepiej i szybciej.",
-    "subtitle": "Od stron wizytówek po złożone aplikacje i automatyzację procesów — dostarczamy rozwiązania, które mają sens i opłacają się.",
+    "subtitle": "Projektujemy skuteczne strony internetowe, tworzymy dedykowane aplikacje oraz automatyzacje, które przyspieszają pracę zespołów.",
     "primaryCta": "Poznaj naszą ofertę",
     "secondaryCta": "Skontaktuj się z nami"
   },
@@ -11,12 +11,12 @@
     "labelManagement": "Zarząd"
   },
   "offer": {
-    "title": "Oferta",
-    "subtitle": "Technologia i automatyzacja dopasowane tak, by szybko dostarczać realną wartość.",
+    "title": "Projektowanie stron WWW i usługi cyfrowe",
+    "subtitle": "Skupiamy się na użytecznym projektowaniu stron, skalowalnych produktach cyfrowych i usługach automatyzacji dostarczanych w tempie startupu.",
     "cards": {
       "websites": {
-        "title": "Strony WWW",
-        "body": "Od prostych wizytówek po wielostronicowe serwisy i rozbudowane portale z modułami szytymi na miarę."
+        "title": "Projektowanie stron WWW",
+        "body": "Wizytówki, wielostronicowe serwisy i modułowe systemy treści dopracowane pod szybkość, przejrzystość i SEO."
       },
       "apps": {
         "title": "Aplikacje dedykowane",
