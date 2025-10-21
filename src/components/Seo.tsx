@@ -17,7 +17,7 @@ const SOCIAL_PROFILES = [
 ]
 const DEFAULT_EMAIL = 'wgen.solutions@gmail.com'
 const sharedImage = `${SITE_URL}images/widget-logo.png`
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GOOGLE_ANALYTICS_ID
+const GA_MEASUREMENT_ID = 'G-3690LFEG71'
 
 export function Seo() {
   const { t, i18n } = useTranslation(['common'])

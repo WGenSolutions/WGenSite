@@ -64,7 +64,7 @@ export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps
               alt="WGen logo"
               className={clsx(
                 'w-auto rounded-xl relative z-10 transition-all duration-300',
-                hasScrolled ? 'h-12 sm:h-14' : 'h-16 sm:h-20',
+                hasScrolled ? 'h-10 sm:h-14' : 'h-16 sm:h-20',
               )}
             />
           </span>
