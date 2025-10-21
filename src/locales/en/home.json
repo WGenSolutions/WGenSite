@@ -1,191 +1,191 @@
 {
   "hero": {
-    "title": "Build better, faster.",
-    "subtitle": "We design conversion-first web pages, build custom apps, and deliver process automation that helps teams move faster.",
+    "title": "Build better. Build faster.",
+    "subtitle": "We design high-performing websites, build custom applications, and deliver process automations that help teams work smarter and grow faster.",
     "primaryCta": "Explore our offer",
     "secondaryCta": "Contact us"
   },
   "nodes": {
-    "labelShopFloor": "Shop floor",
+    "labelShopFloor": "Shop Floor",
     "labelOffice": "Office",
     "labelManagement": "Management"
   },
   "offer": {
-    "title": "Web page design & digital services",
-    "subtitle": "Human-centred web page design, custom applications, and automation services tailored to ship value.",
+    "title": "Web Design & Digital Services",
+    "subtitle": "We create user-focused websites, custom business applications, and automation systems that deliver measurable results and accelerate your digital transformation.",
     "cards": {
       "websites": {
-        "title": "Web page design",
-        "body": "High-performing landing pages, multi-page websites, and modular content systems crafted for clarity, speed, and SEO."
+        "title": "Web Design",
+        "body": "From landing pages to full-scale corporate websites — we build fast, SEO-optimized, and conversion-driven websites tailored to your goals."
       },
       "apps": {
-        "title": "Custom apps",
-        "body": "Tailor-made applications for your unique workflows."
+        "title": "Custom Applications",
+        "body": "We design and develop tailor-made applications that fit your unique business workflows — scalable, secure, and easy to use."
       },
       "automations": {
-        "title": "Automations",
-        "body": "Streamline processes with our Automation Center platform."
+        "title": "Business Automations",
+        "body": "Streamline operations and eliminate repetitive tasks with our Automation Center platform, designed for real productivity gains."
       },
       "exitExcel": {
-        "title": "Exit Excel",
-        "body": "Relying on spreadsheets? We’ll help you scale beyond Excel."
+        "title": "Beyond Excel",
+        "body": "Still relying on spreadsheets? We’ll help you move toward scalable systems that improve efficiency and data integrity."
       },
       "widgets": {
-        "title": "Widgets & mobile",
-        "body": "Get quick access to company data on the go."
+        "title": "Widgets & Mobile Apps",
+        "body": "Access company data anywhere, anytime — through lightweight, custom-built widgets and mobile tools."
       }
     }
   },
   "products": {
-    "title": "Products",
+    "title": "Our Products",
     "automationCenter": {
       "headline": "Automation Center",
-      "description": "Our custom platform for orchestrating office and production automations.",
+      "description": "Our proprietary platform for orchestrating office and production automation — flexible, powerful, and AI-ready.",
       "features": [
-        "Includes jobs, tools, and agents for building complex automation workflows",
-        "Offers customizable and dynamic visualization of processes and relationships",
-        "Enables automated code generation powered by artificial intelligence",
-        "Supports on-premises and cloud deployments with full access control",
-        "Allows rapid creation and execution of automation tasks",
-        "Not a no-code solution – providing full flexibility and virtually unlimited possibilities"
+        "Includes modules, jobs, and agents for building complex workflow automations",
+        "Offers fully customizable visualizations of processes and dependencies",
+        "Generates automation code automatically with AI-powered assistance",
+        "Supports both on-premise and cloud deployments with complete access control",
+        "Enables rapid creation, testing, and deployment of automation tasks",
+        "Not a no-code platform — offering full flexibility and virtually limitless integration options"
       ]
     }
   },
   "experience": {
     "title": "Experience",
-    "body": "We help companies digitise their operations - connecting the shop floor, office, and leadership teams with one data flow. We build tailor-made solutions and platforms that integrate multiple departments.",
+    "body": "We help companies digitize and automate their operations — connecting the shop floor, office, and management into one unified data ecosystem. Our custom solutions and platforms improve collaboration, visibility, and business performance.",
     "projects": {
-      "headline": "Selected projects",
+      "headline": "Selected Projects",
       "items": [
         {
           "id": "vanSalesApp",
-          "title": "Van-sales companion app",
-          "description": "Mobile van-seller toolkit with inventory, promos, and order capture offline."
+          "title": "Van-Sales Companion App",
+          "description": "Mobile toolkit for van sellers — access inventory, promotions, and capture orders, even offline."
         },
         {
           "id": "productionMonitor",
-          "title": "Production monitor",
-          "description": "Real-time shop-floor view aggregating line data and quality alerts."
+          "title": "Production Monitor",
+          "description": "Real-time visualization of production line data with quality and performance alerts."
         },
         {
           "id": "productionPlanning",
-          "title": "Production planning",
-          "description": "Scheduling suite with load simulations and visual shift timelines."
+          "title": "Production Planning",
+          "description": "Advanced scheduling tools with visual shift planning and load simulations."
         },
         {
           "id": "productionDashboards",
-          "title": "Production dashboards",
-          "description": "Live OEE, KPI, and machine status dashboards with instant updates."
+          "title": "Production Dashboards",
+          "description": "Real-time dashboards for OEE, KPI, and machine status updates."
         },
         {
           "id": "workforceManagement",
-          "title": "Workforce management",
-          "description": "One console for shifts, attendance, and competency planning."
+          "title": "Workforce Management",
+          "description": "All-in-one console for managing shifts, attendance, and employee skills."
         },
         {
           "id": "employeeEvaluation",
-          "title": "Employee evaluation",
-          "description": "Digital 360 feedback and growth path reviews for teams."
+          "title": "Employee Evaluation",
+          "description": "Digital 360° feedback forms and career development tracking for teams."
         },
         {
           "id": "warehouseOps",
-          "title": "Warehouse operations",
-          "description": "Inbound, outbound, and stock audits with WMS integrations."
+          "title": "Warehouse Operations",
+          "description": "Inbound, outbound, and inventory control with seamless WMS integration."
         },
         {
           "id": "officeAutomations",
-          "title": "Office automations",
-          "description": "RPA bots and AI agents relieving administrative workload."
+          "title": "Office Automations",
+          "description": "RPA bots and AI assistants that reduce administrative workloads and errors."
         },
         {
           "id": "mobileApps",
-          "title": "Corporate mobile apps",
-          "description": "Dedicated mobile apps for reporting, service, and field requests."
+          "title": "Corporate Mobile Apps",
+          "description": "Custom mobile apps for reporting, field service, and internal communication."
         },
         {
           "id": "documentFlow",
-          "title": "Document flow",
-          "description": "Electronic approvals with compliance-ready document trails."
+          "title": "Document Flow",
+          "description": "Electronic document workflows with approval tracking and compliance support."
         },
         {
           "id": "b2bPlatforms",
-          "title": "B2B communication platforms",
-          "description": "Portals that connect suppliers and customers with shared data."
+          "title": "B2B Platforms",
+          "description": "Data-sharing portals that connect suppliers, customers, and business partners."
         },
         {
           "id": "feedbackOps",
-          "title": "Feedback management",
-          "description": "Collect insights from shop-floor, hotlines, and outlets in one place."
+          "title": "Feedback Management",
+          "description": "Unified system for collecting insights from production, sales, and customer service."
         },
         {
           "id": "ecommerce",
-          "title": "E-commerce platform",
-          "description": "Online stores synchronised with production and inventory."
+          "title": "E-Commerce Platform",
+          "description": "Integrated online stores connected with inventory, logistics, and production."
         },
         {
           "id": "gatehouseOps",
-          "title": "Gatehouse control",
-          "description": "Visitor management with access control and time tracking."
+          "title": "Gatehouse Operations",
+          "description": "Visitor management system with access control and time logging."
         },
         {
           "id": "productionPrepAutomation",
-          "title": "Production prep automation",
-          "description": "Automated generation of production docs and material packs."
+          "title": "Production Prep Automation",
+          "description": "Automatically generate production documentation and material lists."
         },
         {
           "id": "shippingOps",
-          "title": "Shipping operations",
-          "description": "Shipping panel with labels, tracking, and carrier integrations."
+          "title": "Shipping Operations",
+          "description": "Shipping panel with labeling, tracking, and courier integrations."
         },
         {
           "id": "lunchOrdering",
-          "title": "E-lunch ordering",
-          "description": "Meal ordering platform with benefit settlements built in."
+          "title": "E-Lunch Ordering",
+          "description": "Employee meal ordering and benefit management platform."
         },
         {
           "id": "analytics",
-          "title": "Reports and analytics",
-          "description": "Advanced reports, visualisations, and governance alerts."
+          "title": "Reports & Analytics",
+          "description": "Advanced data dashboards and business intelligence for better decisions."
         },
         {
           "id": "crm",
-          "title": "CRM",
-          "description": "Customer relationship management tailored to your sales cycle."
+          "title": "CRM System",
+          "description": "Customer relationship management tailored to your specific sales process."
         }
       ]
     },
-    "focus": "We currently double-down on office and production automations powered by our Automation Center platform."
+    "focus": "We currently focus on AI-powered office and production automations built on our Automation Center platform."
   },
   "about": {
     "title": "About Us",
-    "intro": "We're a small but highly dedicated team of passionate developers. We deliver fast, reliable, and high-quality solutions for web design, custom applications, and business automation.",
-    "highlightTitle": "What sets us apart?",
+    "intro": "We’re a small, passionate team of developers and designers who create fast, reliable, and scalable digital solutions. Our expertise covers web design, custom software development, and business process automation.",
+    "highlightTitle": "What Makes Us Different?",
     "highlights": [
-      { "id": "speed", "text": "Simplest projects can be ready in just 48 hours" },
-      { "id": "value", "text": "We are best programmers. Not the most expensive. We work smart, not hard." },
-      { "id": "ai", "text": "We use AI tools to speed up development without compromising quality" },
-      { "id": "commitment", "text": "We're always ready to skip the latest episode of our favorite show — just to make sure your product is ready ASAP" },
-      { "id": "automation", "text": "We help companies move beyond Excel sheets and into smarter, scalable solutions" },
-      { "id": "widget", "text": "Need widget for your company data? We will design one for you" }
+      { "id": "speed", "text": "We deliver simple projects in as little as 48 hours — fast and professional." },
+      { "id": "value", "text": "Top-tier developers at fair rates — we focus on smart, efficient work." },
+      { "id": "ai", "text": "We use AI tools to accelerate development without compromising quality." },
+      { "id": "commitment", "text": "Deadlines matter — we’ll skip our favorite show if it means shipping faster." },
+      { "id": "automation", "text": "We help teams move beyond spreadsheets to smarter, scalable systems." },
+      { "id": "widget", "text": "Need a company widget or mini-app? We’ll design and build it for you." }
     ]
   },
   "hobby": {
-    "title": "What we're building for fun",
-    "widgetAlt": "WG Weather widget logo",
-    "weather": "Weather widget — coming soon.",
-    "next": "What next? Let's talk."
+    "title": "What We Build After Hours",
+    "widgetAlt": "WG Weather Widget logo",
+    "weather": "Weather widget — launching soon.",
+    "next": "What’s next? Let’s talk."
   },
   "contact": {
     "title": "Contact",
-    "body": "Share a few lines about your challenge and we'll come back with next steps.",
+    "body": "Tell us briefly about your challenge or idea, and we’ll get back to you with the next steps.",
     "emailLabel": "Email us at",
-    "cta": "Start an email",
+    "cta": "Send an email",
     "responseTime": "We usually reply within one business day.",
     "points": [
-      "Outline the product, automation, or site you want to build.",
-      "Mention timelines, stakeholders, and integrations that matter.",
-  "Prefer async? Send a few bullet points and we'll follow up with a plan."
+      "Describe the product, automation, or website you’d like to build.",
+      "Include information about timelines, stakeholders, and required integrations.",
+      "Prefer async communication? Send a few bullet points — we’ll follow up with an action plan."
     ],
-    "imageAlt": "Team collaborating remotely on a digital project."
+    "imageAlt": "Illustration of a remote team collaborating on a digital project."
   }
 }
