@@ -1,14 +1,14 @@
 {
   "meta": {
     "title": "WGen - AI Automation i Studio Oprogramowania",
-    "description": "WGen projektuje skuteczne strony internetowe, dedykowane oprogramowanie i automatyzacje, które przyspieszają rozwój firm dzięki narzędziom AI.",
+    "description": "WGen projektuje strony internetowe, dedykowane oprogramowanie i automatyzacje, które przyspieszają rozwój firm dzięki narzędziom AI.",
     "keywords": "projektowanie stron internetowych, web design, automatyzacja AI, rozwój oprogramowania, aplikacje webowe, projektowanie produktów, WGen Solutions",
     "ogImageAlt": "Zespół WGen pracuje nad panelami automatyzacji AI dla klientów",
     "twitterHandle": "@WGenSolutions"
   },
   "brand": {
     "name": "WGen",
-    "tagline": "Software | Automatyzacja AI | Web Dev"
+    "tagline": "Oprogramowanie | Automatyzacja AI | Tworzenie stron WWW"
   },
   "navigation": {
     "hero": "Start",
