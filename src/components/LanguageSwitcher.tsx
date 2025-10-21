@@ -159,7 +159,7 @@ export default function LanguageSwitcher() {
                 hidden: { transition: { staggerChildren: 0.02, staggerDirection: -1 } },
                 show: { transition: { staggerChildren: 0.03 } },
               }}
-              className="max-h-72 overflow-auto py-1"
+              className="max-h-72 overflow-auto py-1 bg-blue-950/85"
             >
               {languages.map((lang, idx) => {
                 const isActive = idx === activeIndex;

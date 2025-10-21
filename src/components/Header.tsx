@@ -91,7 +91,9 @@ export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps
         </nav>
 
         <div className="flex items-center gap-3">
-          <LanguageSwitcher />
+          <div className={clsx(!hasScrolled ? 'sm:block hidden' : '')}>
+            <LanguageSwitcher />
+          </div>
           <button
             type="button"
             className="font-display text-xs uppercase tracking-[0.3em] text-muted transition hover:text-foreground md:hidden"
@@ -118,6 +120,9 @@ export const Header = ({ activeSection, sections, onSectionSelect }: HeaderProps
             aria-label="Mobile navigation"
           >
             <ul className="space-y-2 border-t border-white/10 bg-background/95 px-6 pb-6 pt-4">
+              <li key="language-switcher" className={clsx(hasScrolled ? 'sm:block hidden' : '')}>
+                <LanguageSwitcher />
+              </li>
               {sections.map((section) => (
                 <li key={section.id}>
                   <a
