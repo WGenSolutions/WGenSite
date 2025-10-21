@@ -62,13 +62,19 @@ export const About = () => {
         viewport={{ once: true, amount: 0.12 }}
         variants={containerVariants}
       >
-        <div className="space-y-6 rounded-3xl border border-white/5 bg-background/70 p-6 shadow-inner">
+        <div className="space-y-6 rounded-3xl border border-white/5 bg-background/70 p-6 pt-8 mt-2 shadow-inner">
           <motion.p
             className="text-lg leading-relaxed text-foreground/90"
             variants={containerVariants}
           >
             {intro}
           </motion.p>
+
+          <img
+            src="/images/about us.png"
+            alt={t('about.title')}
+            className="object-cover"
+          />
         </div>
 
         <motion.div

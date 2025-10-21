@@ -161,8 +161,8 @@
     "intro": "We're a small but highly dedicated team of passionate developers. We deliver fast, reliable, and high-quality solutions for web design, custom applications, and business automation.",
     "highlightTitle": "What sets us apart?",
     "highlights": [
-      { "id": "speed", "text": "Simplest projects can be ready in just 24 hours" },
-      { "id": "value", "text": "We are best programmers. Not the most expensive" },
+      { "id": "speed", "text": "Simplest projects can be ready in just 48 hours" },
+      { "id": "value", "text": "We are best programmers. Not the most expensive. We work smart, not hard." },
       { "id": "ai", "text": "We use AI tools to speed up development without compromising quality" },
       { "id": "commitment", "text": "We're always ready to skip the latest episode of our favorite show — just to make sure your product is ready ASAP" },
       { "id": "automation", "text": "We help companies move beyond Excel sheets and into smarter, scalable solutions" },
