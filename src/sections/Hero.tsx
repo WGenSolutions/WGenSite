@@ -9,20 +9,37 @@ function Diagram({ reduced, className = '' }: { reduced: boolean; className?: st
   const { t } = useTranslation('home');
 
   const canvasSize = 360
-  const centerX = canvasSize / 2
-  const topY = 95
-  const baseY = 265
-  const offsetX = 115
+  const center = canvasSize / 2
+  const radius = 135
 
-  const A = { x: centerX - offsetX, y: baseY, label: t('nodes.labelShopFloor') }
-  const B = { x: centerX, y: topY, label: t('nodes.labelManagement') }
-  const C = { x: centerX + offsetX, y: baseY, label: t('nodes.labelOffice') }
+  const polarToCartesian = (angleRad: number) => ({
+    x: center + radius * Math.cos(angleRad),
+    y: center + radius * Math.sin(angleRad),
+  })
 
-  const connections = [
-    [A, B],
-    [B, C],
-    [A, C],
-  ] as const
+  const nodes = [
+    { id: 'management', angleDeg: -90, label: t('nodes.labelManagement') },
+    { id: 'office', angleDeg: 30, label: t('nodes.labelOffice') },
+    { id: 'shop-floor', angleDeg: 150, label: t('nodes.labelShopFloor') },
+  ].map((node) => {
+    const angleRad = (node.angleDeg * Math.PI) / 180
+    return {
+      ...node,
+      angleRad,
+      ...polarToCartesian(angleRad),
+    }
+  })
+
+  const connections = nodes.map((node, index) => {
+    const next = nodes[(index + 1) % nodes.length]
+    return [node, next] as const
+  })
+
+  const getArcDelta = (fromAngle: number, toAngle: number) => {
+    let delta = toAngle - fromAngle
+    if (delta <= 0) delta += Math.PI * 2
+    return delta
+  }
 
   const draw = {
     hidden: { pathLength: 0, opacity: 0 },
@@ -32,8 +49,7 @@ function Diagram({ reduced, className = '' }: { reduced: boolean; className?: st
   return (
     <div className={`relative mx-auto w-full max-w-[420px] md:ml-auto ${className}`}>
       <div
-        className="relative h-full w-full overflow-visible rounded-2xl bg-background/40 p-4 sm:p-6"
-        style={{ aspectRatio: '1 / 1' }}
+        className="relative aspect-square w-full overflow-visible rounded-full  bg-background/40 p-6 shadow-[0_0_36px_rgba(88,120,255,0.04)] sm:p-8"
         aria-label="Information flow between shop floor, office, and management"
       >
         {/* Soft gradient background blobs */}
@@ -78,18 +94,10 @@ function Diagram({ reduced, className = '' }: { reduced: boolean; className?: st
           </defs>
 
           {/* Draw animated connecting lines */}
-            {connections.map(([from, to], i) => {
-            // Default: bend upward slightly
-            const curveStrength = 80
-            let controlY = Math.min(from.y, to.y) - curveStrength
-
-            // For the Shop Floor <-> Management line, bend downward
-            const isShopToMgmt =
-              (from.label === t('nodes.labelShopFloor') && to.label === t('nodes.labelOffice')) ||
-              (from.label === t('nodes.labelOffice') && to.label === t('nodes.labelShopFloor'))
-            if (isShopToMgmt) controlY = Math.max(from.y, to.y) + curveStrength
-
-            const d = `M ${from.x} ${from.y} Q ${(from.x + to.x) / 2} ${controlY} ${to.x} ${to.y}`
+          {connections.map(([from, to], i) => {
+            const delta = getArcDelta(from.angleRad, to.angleRad)
+            const largeArc = delta > Math.PI ? 1 : 0
+            const d = `M ${from.x} ${from.y} A ${radius} ${radius} 0 ${largeArc} 1 ${to.x} ${to.y}`
 
             return (
               <motion.path
@@ -108,7 +116,6 @@ function Diagram({ reduced, className = '' }: { reduced: boolean; className?: st
                   delay: i * 0.15 + 0.2,
                   ease: [0.16, 1, 0.3, 1],
                 }}
-                markerEnd="url(#arrow)"
                 opacity={0.9}
               />
             )
@@ -116,25 +123,14 @@ function Diagram({ reduced, className = '' }: { reduced: boolean; className?: st
 
 
           {/* Bidirectional signal orbs */}
-            {!reduced &&
-              connections.map(([from, to], i) => {
-              // Use the same control point logic as the paths
-              const curveStrength = 80
-              let controlY = Math.min(from.y, to.y) - curveStrength
-              const isShopToMgmt =
-                (from.label === t('nodes.labelShopFloor') && to.label === t('nodes.labelOffice')) ||
-                (from.label === t('nodes.labelOffice') && to.label === t('nodes.labelShopFloor'))
-              if (isShopToMgmt) controlY = Math.max(from.y, to.y) + curveStrength
+          {!reduced &&
+            connections.map(([from, to], i) => {
+              const delta = getArcDelta(from.angleRad, to.angleRad)
 
-              // Quadratic Bezier helpers (same control point as the line)
-              const cx = (t: number) =>
-                (1 - t) * (1 - t) * from.x +
-                2 * (1 - t) * t * ((from.x + to.x) / 2) +
-                t * t * to.x
-              const cy = (t: number) =>
-                (1 - t) * (1 - t) * from.y +
-                2 * (1 - t) * t * controlY +
-                t * t * to.y
+              const pointAt = (t: number) => {
+                const angle = from.angleRad + delta * t
+                return polarToCartesian(angle)
+              }
 
               const dur = 2.8 + i * 0.3
 
@@ -147,8 +143,8 @@ function Diagram({ reduced, className = '' }: { reduced: boolean; className?: st
                     style={{ filter: 'url(#glow)' }}
                     initial={{ opacity: 0 }}
                   >
-                    <animate attributeName="cx" values={`${cx(0)};${cx(0.5)};${cx(1)}`} dur={`${dur}s`} repeatCount="indefinite" />
-                    <animate attributeName="cy" values={`${cy(0)};${cy(0.5)};${cy(1)}`} dur={`${dur}s`} repeatCount="indefinite" />
+                    <animate attributeName="cx" values={`${pointAt(0).x};${pointAt(0.5).x};${pointAt(1).x}`} dur={`${dur}s`} repeatCount="indefinite" />
+                    <animate attributeName="cy" values={`${pointAt(0).y};${pointAt(0.5).y};${pointAt(1).y}`} dur={`${dur}s`} repeatCount="indefinite" />
                     <animate attributeName="opacity" values="0;1;0" dur={`${dur}s`} repeatCount="indefinite" />
                   </motion.circle>
 
@@ -159,8 +155,8 @@ function Diagram({ reduced, className = '' }: { reduced: boolean; className?: st
                     style={{ filter: 'url(#glow)' }}
                     initial={{ opacity: 0 }}
                   >
-                    <animate attributeName="cx" values={`${cx(1)};${cx(0.5)};${cx(0)}`} dur={`${dur + 0.4}s`} begin="1s" repeatCount="indefinite" />
-                    <animate attributeName="cy" values={`${cy(1)};${cy(0.5)};${cy(0)}`} dur={`${dur + 0.4}s`} begin="1s" repeatCount="indefinite" />
+                    <animate attributeName="cx" values={`${pointAt(1).x};${pointAt(0.5).x};${pointAt(0).x}`} dur={`${dur + 0.4}s`} begin="1s" repeatCount="indefinite" />
+                    <animate attributeName="cy" values={`${pointAt(1).y};${pointAt(0.5).y};${pointAt(0).y}`} dur={`${dur + 0.4}s`} begin="1s" repeatCount="indefinite" />
                     <animate attributeName="opacity" values="0;1;0" dur={`${dur + 0.4}s`} begin="1s" repeatCount="indefinite" />
                   </motion.circle>
                 </g>
@@ -169,7 +165,7 @@ function Diagram({ reduced, className = '' }: { reduced: boolean; className?: st
 
 
           {/* Nodes */}
-          {[A, B, C].map((n, i) => (
+          {nodes.map((n, i) => (
             <g key={i} transform={`translate(${n.x}, ${n.y})`}>
               {!reduced && (
                 <motion.circle
