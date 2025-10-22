@@ -32,7 +32,7 @@ export const Section = ({
     <motion.section
       id={id}
       aria-labelledby={headingId}
-      className={`group/section relative scroll-mt-32 py-20 sm:py-24 ${className}`}
+      className={`group/section relative scroll-mt-32 py-4 sm:py-24 ${className}`}
       {...animationProps}
     >
       <motion.div

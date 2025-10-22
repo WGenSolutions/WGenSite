@@ -14,7 +14,7 @@ export const Products = () => {
         className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-br from-primary/20 via-background/80 to-background/95 p-8 shadow-lg"
         initial={prefersReducedMotion ? undefined : { opacity: 0, scale: 0.97 }}
         whileInView={prefersReducedMotion ? undefined : { opacity: 1, scale: 1 }}
-        viewport={{ once: true, amount: 0.4 }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.6, ease: [0.24, 0.8, 0.25, 1] as const }}
       >
         <div

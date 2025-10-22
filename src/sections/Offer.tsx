@@ -48,7 +48,7 @@ export const Offer = () => {
         className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3"
         initial={prefersReducedMotion ? undefined : { opacity: 0, y: 24 }}
         whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-        viewport={{ amount: 0.3, once: true }}
+        viewport={{ amount: 0.1, once: true }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
       >
         {cards.map((card) => (

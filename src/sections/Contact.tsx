@@ -22,7 +22,7 @@ export const Contact = () => {
           className="space-y-6"
           initial={prefersReducedMotion ? undefined : { opacity: 0, y: 24 }}
           whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.12 }}
+          viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
         >
           <div className="grid gap-3 text-base text-muted">
