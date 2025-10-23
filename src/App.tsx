@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import Hero from './sections/Hero'
 import Offer from './sections/Offer'
 import NewEra from './sections/NewEra'
+import Technologies from './sections/Technologies'
 import Products from './sections/Products'
 import Experience from './sections/Experience'
 import About from './sections/About'
@@ -17,6 +18,7 @@ import Seo from './components/Seo'
 const SECTION_IDS = [
   'offer',
   'newEra',
+  'technologies',
   'products',
   'experience',
   'about',
@@ -58,7 +60,8 @@ function App() {
         <AuroraBackground />
         <Hero />
         <Offer />
-  <NewEra />
+    <NewEra />
+    <Technologies />
         <Products />
         <Experience />
         <About />

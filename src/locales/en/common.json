@@ -12,8 +12,9 @@
   },
   "navigation": {
     "hero": "Home",
-  "offer": "Offer",
-  "newEra": "New Era",
+    "offer": "Offer",
+    "newEra": "New Era",
+    "technologies": "Technologies",
     "products": "Products",
     "experience": "Experience",
     "about": "About",

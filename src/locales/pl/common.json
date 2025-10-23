@@ -12,8 +12,9 @@
   },
   "navigation": {
     "hero": "Start",
-  "offer": "Oferta",
-  "newEra": "Nowa era",
+    "offer": "Oferta",
+    "newEra": "Nowa era",
+    "technologies": "Technologie",
     "products": "Produkty",
     "experience": "Doświadczenie",
     "about": "O nas",

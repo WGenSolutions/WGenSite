@@ -40,21 +40,77 @@
     "title": "Nowa era inteligentnych wdrożeń",
     "subtitle": "Oprogramowanie, platformy automatyzacji i serwisy webowe wspierane przez AI, projektowane z myślą o mierzalnym wzroście Twojego biznesu.",
     "manifestoEmphasis": "Przestań tylko marzyć o swoim unikalnym rozwiązaniu.",
-    "manifestoBody": "Zbuduj je z WGen — skracaj czas wdrożenia i zachowaj pełną kontrolę nad kodem.",
-    "context": "Łączymy dogłębną analizę (discovery), projektowanie UX, inżynierię oprogramowania i automatyzację, by dostarczać zgodne, skalowalne systemy, które trwale wzmocnią Twoją cyfrową przewagę.",
-    "callToAction": "Umów bezpłatną konsultację strategiczną",
+    "manifestoBody": "Zbuduj je z WGen",
+    "context": "Łączymy dogłębną analizę, projektowanie UX, inżynierię oprogramowania i automatyzację, by dostarczać solidne, skalowalne systemy, które trwale wzmocnią Twoją cyfrową przewagę.",
+    "callToAction": "Umów bezpłatną konsultację",
     "highlights": {
       "velocity": {
         "title": "Maksymalne przyspieszenie wdrożeń",
-        "body": "Gotowe do uruchomienia platformy dostarczamy nawet w 6 tygodni, dzięki automatycznym testom, CI/CD i wsparciu sztucznej inteligencji."
+        "body": "Gotowe do uruchomienia platformy dostarczamy nawet w kilka tygodni, dzięki wsparciu sztucznej inteligencji."
       },
       "craft": {
-        "title": "Perfekcyjne rzemiosło w każdym detalu",
+        "title": "Perfekcja w każdym detalu",
         "body": "Projektujemy unikalne doświadczenia premium. Opieramy się na danych, inżynierii wspieranej AI i nowoczesnych architekturach modułowych."
       },
       "ownership": {
-        "title": "Pełna własność i niezależność",
+        "title": "Pełna własność",
         "body": "Otrzymujesz uporządkowane repozytoria, pełną dokumentację i wsparcie w przekazaniu projektu."
+      }
+    }
+  },
+  "technologies": {
+    "title": "Technologie, w których jesteśmy mocni",
+    "subtitle": "Łączymy kreatywność ludzi oraz przyspieszenie AI.",
+    "cards": {
+      "humanCoders": {
+        "title": "Programiści",
+        "body": "Doświadczeni inżynierowie projektują przejrzyste, skalowalne systemy i wspierają zespoły w utrzymaniu stałego tempa.",
+        "alt": "Abstrakcyjna ilustracja współpracujących programistów."
+      },
+      "aiCoders": {
+        "title": "Koderzy AI",
+        "body": "Autonomiczni asystenci przygotowują kod, testy i refaktoryzacje pod okiem ekspertów, skracając czas dostaw.",
+        "alt": "Neonowe kształty symbolizujące współpracę ludzi i AI przy kodowaniu."
+      },
+      "aiAutomations": {
+        "title": "Automatyzacje AI",
+        "body": "Przepływy sterowane AI koordynują klasyfikację, ekstrakcję i rekomendacje w procesach biznesowych.",
+        "alt": "Stylizowana sieć automatyzacji z sygnałami AI."
+      },
+      "hybridAutomations": {
+        "title": "Automatyzacje hybrydowe",
+        "body": "Połączenia wnioskowania LLM z deterministycznymi regułami gwarantują powtarzalność automatyzacji.",
+        "alt": "Schemat łączący sieci neuronowe z logicznymi blokami."
+      },
+      "python": {
+        "title": "Python",
+        "body": "Python napędza integracje danych, usługi integracyjne i rozszerzenia nasze Centrum Automatyzacji.",
+        "alt": "Abstrakcyjna fala w barwach Pythona."
+      },
+      "typescript": {
+        "title": "TypeScript",
+        "body": "Silnie typowane interfejsy i narzędzia w TypeScript zapewniają bezpieczeństwo i przewidywalność.",
+        "alt": "Gradient inspirowany TypeScriptem z geometrycznymi akcentami."
+      },
+      "nodejs": {
+        "title": "Node.js",
+        "body": "Usługi Node.js dostarczają niskolatencyjne API, workerów i mosty integracyjne dla nowoczesnych stacków.",
+        "alt": "Zielona abstrakcja nawiązująca do wydajności Node.js."
+      },
+      "fastApi": {
+        "title": "FastAPI",
+        "body": "Mikrousługi FastAPI udostępniają szybkie, dobrze udokumentowane endpointy do scenariuszy automatyzacji.",
+        "alt": "Turkusowe smugi symbolizujące prędkość FastAPI."
+      },
+      "reactSmallApps": {
+        "title": "React do lekkich aplikacji",
+        "body": "React służy nam do lekkich aplikacji oraz stron www.",
+        "alt": "Atom Reacta przedstawiony jako kompaktowy widget."
+      },
+      "angularBigApps": {
+        "title": "Angular do dużych aplikacji",
+        "body": "Angular wykorzystujemy przy dużych aplikacjach korporacyjnych.",
+        "alt": "Abstrakcyjna panorama inspirowana Angular dla projektów enterprise."
       }
     }
   },
