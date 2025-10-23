@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { motion, useReducedMotion } from 'framer-motion'
+import { useReducedMotion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Section from '../components/Section'
 
@@ -250,46 +250,124 @@ const TECH_TOPICS = [
   {
     id: 'reactSmallApps',
     illustration: createIllustration(`
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-label="Dark React apps illustration">
         <defs>
-          <linearGradient id="reactFleetBody" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#f8fafc" />
-            <stop offset="40%" stop-color="#c4b5fd" />
-            <stop offset="100%" stop-color="#38bdf8" />
-          </linearGradient>
-          <radialGradient id="reactFleetAura" cx="52%" cy="46%" r="68%">
-            <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.9" />
-            <stop offset="55%" stop-color="#a5b4fc" stop-opacity="0.35" />
-            <stop offset="100%" stop-color="#020617" stop-opacity="0" />
+          <!-- Glow aura -->
+          <radialGradient id="auraDark" cx="50%" cy="46%" r="60%">
+            <stop offset="0%" stop-color="#1e3a8a" stop-opacity="0.8"/>
+            <stop offset="60%" stop-color="#0ea5e9" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
           </radialGradient>
+
+          <!-- Shadow for cards -->
+          <filter id="darkCardShadow" x="-30%" y="-30%" width="160%" height="160%">
+            <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0ea5e9" flood-opacity="0.15"/>
+          </filter>
+
+          <!-- Accent gradient -->
+          <linearGradient id="accentDark" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#38bdf8"/>
+            <stop offset="100%" stop-color="#818cf8"/>
+          </linearGradient>
+
+          <!-- Subtle grid -->
+          <pattern id="darkGrid" width="16" height="16" patternUnits="userSpaceOnUse">
+            <path d="M16 0H0V16" fill="none" stroke="#334155" stroke-opacity="0.6" stroke-width="1"/>
+          </pattern>
         </defs>
-        <rect width="320" height="200" fill="#010516" />
-        <circle cx="160" cy="100" r="84" fill="#0f172a" opacity="0.55" />
-        <circle cx="160" cy="100" r="72" fill="url(#reactFleetAura)" />
-        <g fill="none" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="2">
-          <path d="M56 160 L 264 64" />
-          <path d="M72 176 L 280 80" />
-          <path d="M40 144 L 248 48" />
+
+        <!-- Background -->
+        <rect width="320" height="200" fill="#0f172a"/>
+        <rect width="320" height="200" fill="url(#darkGrid)" opacity="0.3"/>
+
+        <!-- Aura glow -->
+        <circle cx="160" cy="92" r="88" fill="url(#auraDark)"/>
+
+        <!-- React atom -->
+        <g transform="translate(160 92)">
+          <ellipse rx="56" ry="22" fill="none" stroke="url(#accentDark)" stroke-width="3" opacity="0.85"/>
+          <ellipse rx="56" ry="22" fill="none" stroke="url(#accentDark)" stroke-width="3" transform="rotate(60)" opacity="0.85"/>
+          <ellipse rx="56" ry="22" fill="none" stroke="url(#accentDark)" stroke-width="3" transform="rotate(-60)" opacity="0.85"/>
+          <circle r="7" fill="#38bdf8"/>
+          <circle r="11" fill="none" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="2"/>
         </g>
-        <g>
-          <g transform="translate(110 96)">
-            <path d="M0 32 C14 16 48 -8 76 -2 C56 8 26 28 10 42 Z" fill="url(#reactFleetBody)" />
-            <path d="M64 -4 C54 6 32 28 18 36" fill="none" stroke="#f8fafc" stroke-width="4" stroke-linecap="round" stroke-opacity="0.5" />
-            <circle cx="68" cy="-6" r="6" fill="#f8fafc" opacity="0.8" />
+
+        <!-- Light rays -->
+        <g stroke="url(#accentDark)" stroke-linecap="round" stroke-opacity="0.4">
+          <path d="M160 8v12" stroke-width="2"/>
+          <path d="M160 164v12" stroke-width="2"/>
+          <path d="M296 92h-12" stroke-width="2"/>
+          <path d="M36 92H24" stroke-width="2"/>
+          <path d="M246 26l-8 8" stroke-width="2"/>
+          <path d="M74 158l-8 8" stroke-width="2"/>
+          <path d="M246 158l-8-8" stroke-width="2"/>
+          <path d="M74 26l8 8" stroke-width="2"/>
+        </g>
+
+        <!-- App cards (dark UI) -->
+        <g filter="url(#darkCardShadow)">
+          <!-- Card 1 -->
+          <g transform="translate(32 118)">
+            <rect width="108" height="62" rx="12" fill="#1e293b" stroke="#334155"/>
+            <g transform="translate(10 8)">
+              <circle r="3" cx="0" cy="0" fill="#ef4444"/>
+              <circle r="3" cx="10" cy="0" fill="#f59e0b"/>
+              <circle r="3" cx="20" cy="0" fill="#10b981"/>
+            </g>
+            <rect x="12" y="24" width="72" height="8" rx="4" fill="#334155"/>
+            <rect x="12" y="38" width="56" height="8" rx="4" fill="#334155"/>
+            <path d="M16 50c8-10 14-10 22-2s16 10 24-2" fill="none" stroke="url(#accentDark)" stroke-width="2"/>
           </g>
-          <g transform="translate(168 110) scale(0.72)">
-            <path d="M0 32 C14 16 48 -8 76 -2 C56 8 26 28 10 42 Z" fill="url(#reactFleetBody)" opacity="0.8" />
-            <path d="M64 -4 C54 6 32 28 18 36" fill="none" stroke="#e0f2fe" stroke-width="4" stroke-linecap="round" stroke-opacity="0.45" />
-            <circle cx="68" cy="-6" r="6" fill="#e0f2fe" opacity="0.75" />
+
+          <!-- Card 2 -->
+          <g transform="translate(182 116)">
+            <rect width="108" height="66" rx="12" fill="#1e293b" stroke="#334155"/>
+            <g transform="translate(10 8)">
+              <circle r="3" cx="0" cy="0" fill="#ef4444"/>
+              <circle r="3" cx="10" cy="0" fill="#f59e0b"/>
+              <circle r="3" cx="20" cy="0" fill="#10b981"/>
+            </g>
+            <rect x="12" y="24" width="24" height="24" rx="6" fill="#0f172a"/>
+            <rect x="42" y="24" width="24" height="24" rx="6" fill="#0f172a"/>
+            <rect x="72" y="24" width="24" height="24" rx="6" fill="#0f172a"/>
+            <path d="M24 36h0" stroke="url(#accentDark)" stroke-width="6" stroke-linecap="round"/>
+            <path d="M54 36h0" stroke="url(#accentDark)" stroke-width="6" stroke-linecap="round"/>
+            <path d="M84 36h0" stroke="url(#accentDark)" stroke-width="6" stroke-linecap="round"/>
+            <rect x="24" y="54" width="60" height="6" rx="3" fill="#334155"/>
           </g>
-          <g transform="translate(206 124) scale(0.5)">
-            <path d="M0 32 C14 16 48 -8 76 -2 C56 8 26 28 10 42 Z" fill="url(#reactFleetBody)" opacity="0.7" />
-            <path d="M64 -4 C54 6 32 28 18 36" fill="none" stroke="#dbeafe" stroke-width="4" stroke-linecap="round" stroke-opacity="0.4" />
-            <circle cx="68" cy="-6" r="6" fill="#dbeafe" opacity="0.7" />
+
+          <!-- Card 3 -->
+          <g transform="translate(126 20)">
+            <rect width="68" height="44" rx="10" fill="#1e293b" stroke="#334155"/>
+            <g transform="translate(8 7)">
+              <circle r="2.5" cx="0" cy="0" fill="#ef4444"/>
+              <circle r="2.5" cx="8" cy="0" fill="#f59e0b"/>
+              <circle r="2.5" cx="16" cy="0" fill="#10b981"/>
+            </g>
+            <rect x="12" y="20" width="44" height="6" rx="3" fill="#334155"/>
+            <path d="M12 34c8-6 16-6 24 0s16 6 20-2" fill="none" stroke="url(#accentDark)" stroke-width="2"/>
           </g>
         </g>
-        <circle cx="104" cy="74" r="10" fill="#f8fafc" opacity="0.42" />
-        <circle cx="236" cy="146" r="12" fill="#bae6fd" opacity="0.32" />
+
+        <!-- Floating chips -->
+        <g opacity="0.9">
+          <rect x="32" y="32" width="54" height="22" rx="11" fill="#1e293b" stroke="#334155"/>
+          <circle cx="48" cy="43" r="4" fill="#38bdf8"/>
+          <rect x="58" y="38" width="20" height="10" rx="5" fill="#334155"/>
+        </g>
+        <g opacity="0.9">
+          <rect x="236" y="28" width="52" height="22" rx="11" fill="#1e293b" stroke="#334155"/>
+          <circle cx="252" cy="39" r="4" fill="#818cf8"/>
+          <rect x="262" y="34" width="18" height="10" rx="5" fill="#334155"/>
+        </g>
+
+        <!-- Sparkles -->
+        <g fill="#38bdf8" opacity="0.65">
+          <circle cx="286" cy="152" r="2"/>
+          <circle cx="40" cy="156" r="2"/>
+          <circle cx="272" cy="80" r="1.8"/>
+          <circle cx="52" cy="72" r="1.6"/>
+        </g>
       </svg>
     `),
     shadowClass: 'shadow-[0_0_18px_rgba(56,189,248,0.18)]',
@@ -589,45 +667,37 @@ export const Technologies = () => {
           className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background via-background/90 to-transparent"
           aria-hidden="true"
         />
-        <motion.div
+        <div
           ref={_containerRef}
           className="overflow-x-auto pb-6 sm:pb-8 scrollbar-hidden md:cursor-grab md:active:cursor-grabbing"
-          initial={_prefersReducedMotion ? undefined : { opacity: 0 }}
-          whileInView={_prefersReducedMotion ? undefined : { opacity: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
         >
           <div className="flex min-w-full snap-x snap-mandatory gap-6 px-6 sm:gap-8 sm:px-10">
             {TECH_TOPICS.map((topic, index) => (
-              <motion.article
-                key={topic.id}
-                className={`group relative flex min-h-[22rem] w-[18rem] min-w-[18rem] snap-center flex-col items-start gap-5 rounded-[28px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md transition hover:border-white/20 hover:bg-white/[0.07] ${topic.shadowClass}`}
-                initial={_prefersReducedMotion ? undefined : { opacity: 0, y: 24 }}
-                whileInView={_prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: _prefersReducedMotion ? 0 : index * 0.06, ease: [0.16, 1, 0.3, 1] as const }}
-              >
-                <div className="w-full overflow-hidden rounded-2xl border border-white/10">
-                  <img
-                    src={topic.illustration}
-                    alt={_t(`technologies.cards.${topic.id}.alt`)}
-                    className="h-36 w-full object-cover"
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </div>
-                <div className="flex flex-col gap-3 text-left">
-                  <h3 className="text-lg font-semibold text-white">
-                    {_t(`technologies.cards.${topic.id}.title`)}
-                  </h3>
-                  <p className="text-sm leading-relaxed text-white/75">
-                    {_t(`technologies.cards.${topic.id}.body`)}
-                  </p>
-                </div>
-              </motion.article>
+                <article
+              key={topic.id}
+              className={`group relative flex min-h-[22rem] w-[18rem] min-w-[18rem] snap-center flex-col items-start gap-5 rounded-[28px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md transition hover:border-white/20 hover:bg-white/[0.07] ${topic.shadowClass}`}
+                >
+              <div className="w-full overflow-hidden rounded-2xl border border-white/10">
+              <img
+                src={topic.illustration}
+                alt={_t(`technologies.cards.${topic.id}.alt`)}
+                className="h-36 w-full object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+              </div>
+              <div className="flex flex-col gap-3 text-left">
+              <h3 className="text-lg font-semibold text-white">
+                {_t(`technologies.cards.${topic.id}.title`)}
+              </h3>
+              <p className="text-sm leading-relaxed text-white/75">
+                {_t(`technologies.cards.${topic.id}.body`)}
+              </p>
+              </div>
+                </article>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </Section>
   )
