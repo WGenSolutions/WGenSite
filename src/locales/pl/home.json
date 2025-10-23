@@ -37,24 +37,24 @@
     }
   },
   "newEra": {
-    "title": "Nadchodzi nowa era",
-    "subtitle": "Rozpoczyna się świetlista era usług IT i produktów software'owych — tworzymy je wspólnie z Tobą, w tempie wyobraźni.",
-    "manifestoEmphasis": "Przestań śnić o swoim unikalnym rozwiązaniu.",
-    "manifestoBody": "Zbuduj je z nami. Kod należy do Ciebie.",
-    "context": "Łączymy strategię, discovery, projektowanie i inżynierię w jeden promienny strumień dostaw, dzięki czemu Twoje pomysły szybują bez utraty kontroli.",
-    "callToAction": "Zacznij budowę",
+    "title": "Nowa era inteligentnych wdrożeń",
+    "subtitle": "Oprogramowanie, platformy automatyzacji i serwisy webowe wspierane przez AI, projektowane z myślą o mierzalnym wzroście Twojego biznesu.",
+    "manifestoEmphasis": "Przestań tylko marzyć o swoim unikalnym rozwiązaniu.",
+    "manifestoBody": "Zbuduj je z WGen — skracaj czas wdrożenia i zachowaj pełną kontrolę nad kodem.",
+    "context": "Łączymy dogłębną analizę (discovery), projektowanie UX, inżynierię oprogramowania i automatyzację, by dostarczać zgodne, skalowalne systemy, które trwale wzmocnią Twoją cyfrową przewagę.",
+    "callToAction": "Umów bezpłatną konsultację strategiczną",
     "highlights": {
       "velocity": {
-        "title": "Olśniewająca szybkość",
-        "body": "Uruchamiaj produkcyjne platformy w tygodnie, a nie miesiące, dzięki dostawom prowadzonym przez doświadczonych inżynierów."
+        "title": "Maksymalne przyspieszenie wdrożeń",
+        "body": "Gotowe do uruchomienia platformy dostarczamy nawet w 6 tygodni, dzięki automatycznym testom, CI/CD i wsparciu sztucznej inteligencji."
       },
       "craft": {
-        "title": "Niebiańskie rzemiosło",
-        "body": "Łączymy strategię, design i inżynierię wspieraną AI, aby tworzyć doświadczenia lekkie, a jednocześnie niezawodne."
+        "title": "Perfekcyjne rzemiosło w każdym detalu",
+        "body": "Projektujemy unikalne doświadczenia premium. Opieramy się na danych, inżynierii wspieranej AI i nowoczesnych architekturach modułowych."
       },
       "ownership": {
-        "title": "Pełna własność",
-        "body": "Otrzymujesz transparentne repozytoria, płynne przekazanie i partnera, który zostaje, aż Twoja wizja zabłyśnie."
+        "title": "Pełna własność i niezależność",
+        "body": "Otrzymujesz uporządkowane repozytoria, pełną dokumentację i wsparcie w przekazaniu projektu."
       }
     }
   },

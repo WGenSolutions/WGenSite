@@ -37,24 +37,24 @@
     }
   },
   "newEra": {
-    "title": "The New Era Has Arrived",
-    "subtitle": "A luminous generation of IT services and software products is rising — crafted with you, delivered at the speed of imagination.",
+    "title": "The New Era of Intelligent Delivery",
+    "subtitle": "AI-accelerated software products, automation platforms, and enterprise web experiences engineered for measurable growth.",
     "manifestoEmphasis": "Stop dreaming about your unique, custom solution.",
-    "manifestoBody": "Build it with us. The code is yours.",
-    "context": "We combine discovery, design, engineering, and automation into one radiant delivery stream so your boldest ideas take flight without losing ownership.",
-    "callToAction": "Start your build",
+    "manifestoBody": "Build it with WGen — ship faster and keep full code ownership.",
+    "context": "Our consultants unite discovery, UX, engineering, and automation to launch compliant, scalable systems that secure your digital advantage.",
+    "callToAction": "Schedule a strategy call",
     "highlights": {
       "velocity": {
-        "title": "Radiant Velocity",
-        "body": "Launch production-grade platforms in weeks, not months, with automation-first delivery orchestrated by senior engineers."
+        "title": "Accelerated Launch",
+        "body": "Deploy production-ready platforms in as little as six weeks with automated QA, CI/CD best practices, and AI-assisted delivery."
       },
       "craft": {
-        "title": "Celestial Craft",
-        "body": "Fuse strategy, design, and AI-assisted engineering to sculpt experiences that feel weightless yet resilient."
+        "title": "Perfect Craft",
+        "body": "Co-create premium experiences backed by data-driven UX, AI-powered engineering."
       },
       "ownership": {
-        "title": "Pure Ownership",
-        "body": "Stay in control with transparent codebases, guided handover, and a partner that champions your vision long after launch."
+        "title": "Lifetime Ownership",
+        "body": "Retain clean repositories, documentation, and guided handover."
       }
     }
   },
