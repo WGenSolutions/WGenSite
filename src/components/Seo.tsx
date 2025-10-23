@@ -16,7 +16,7 @@ const SOCIAL_PROFILES = [
   'https://github.com/WGenSolutions',
 ]
 const DEFAULT_EMAIL = 'wgen.solutions@gmail.com'
-const sharedImage = `${SITE_URL}images/widget-logo.png`
+const sharedImage = `${SITE_URL}images/logo.svg`
 const GA_MEASUREMENT_ID = 'G-3690LFEG71'
 
 export function Seo() {
