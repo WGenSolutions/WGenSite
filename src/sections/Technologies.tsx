@@ -672,7 +672,7 @@ export const Technologies = () => {
           className="overflow-x-auto pb-6 sm:pb-8 scrollbar-hidden md:cursor-grab md:active:cursor-grabbing"
         >
           <div className="flex min-w-full snap-x snap-mandatory gap-6 px-6 sm:gap-8 sm:px-10">
-            {TECH_TOPICS.map((topic, index) => (
+            {TECH_TOPICS.map(topic => (
                 <article
               key={topic.id}
               className={`group relative flex min-h-[22rem] w-[18rem] min-w-[18rem] snap-center flex-col items-start gap-5 rounded-[28px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md transition hover:border-white/20 hover:bg-white/[0.07] ${topic.shadowClass}`}
