@@ -36,6 +36,28 @@
       }
     }
   },
+  "newEra": {
+    "title": "The New Era Has Arrived",
+    "subtitle": "A luminous generation of IT services and software products is rising — crafted with you, delivered at the speed of imagination.",
+    "manifestoEmphasis": "Stop dreaming about your unique, custom solution.",
+    "manifestoBody": "Build it with us. The code is yours.",
+    "context": "We combine discovery, design, engineering, and automation into one radiant delivery stream so your boldest ideas take flight without losing ownership.",
+    "callToAction": "Start your build",
+    "highlights": {
+      "velocity": {
+        "title": "Radiant Velocity",
+        "body": "Launch production-grade platforms in weeks, not months, with automation-first delivery orchestrated by senior engineers."
+      },
+      "craft": {
+        "title": "Celestial Craft",
+        "body": "Fuse strategy, design, and AI-assisted engineering to sculpt experiences that feel weightless yet resilient."
+      },
+      "ownership": {
+        "title": "Pure Ownership",
+        "body": "Stay in control with transparent codebases, guided handover, and a partner that champions your vision long after launch."
+      }
+    }
+  },
   "products": {
     "title": "Our Products",
     "automationCenter": {

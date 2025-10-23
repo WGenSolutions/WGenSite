@@ -36,6 +36,28 @@
       }
     }
   },
+  "newEra": {
+    "title": "Nadchodzi nowa era",
+    "subtitle": "Rozpoczyna się świetlista era usług IT i produktów software'owych — tworzymy je wspólnie z Tobą, w tempie wyobraźni.",
+    "manifestoEmphasis": "Przestań śnić o swoim unikalnym rozwiązaniu.",
+    "manifestoBody": "Zbuduj je z nami. Kod należy do Ciebie.",
+    "context": "Łączymy strategię, discovery, projektowanie i inżynierię w jeden promienny strumień dostaw, dzięki czemu Twoje pomysły szybują bez utraty kontroli.",
+    "callToAction": "Zacznij budowę",
+    "highlights": {
+      "velocity": {
+        "title": "Olśniewająca szybkość",
+        "body": "Uruchamiaj produkcyjne platformy w tygodnie, a nie miesiące, dzięki dostawom prowadzonym przez doświadczonych inżynierów."
+      },
+      "craft": {
+        "title": "Niebiańskie rzemiosło",
+        "body": "Łączymy strategię, design i inżynierię wspieraną AI, aby tworzyć doświadczenia lekkie, a jednocześnie niezawodne."
+      },
+      "ownership": {
+        "title": "Pełna własność",
+        "body": "Otrzymujesz transparentne repozytoria, płynne przekazanie i partnera, który zostaje, aż Twoja wizja zabłyśnie."
+      }
+    }
+  },
   "products": {
     "title": "Nasze produkty",
     "automationCenter": {
