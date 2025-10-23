@@ -179,6 +179,14 @@ button {
   animation: logo-shine-sweep 7s ease-in-out infinite;
 }
 
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
 @keyframes logo-shine-sweep {
   0% {
     transform: translateX(-160%) skewX(-18deg);

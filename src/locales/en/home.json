@@ -85,32 +85,37 @@
       "python": {
         "title": "Python",
         "body": "Python powers data integrations, integration services, and extensions of our Automation Hub.",
-        "alt": "An abstract wave in Python's colors."
+        "alt": "Layered cyan and lime waves over a midnight sky."
       },
       "typescript": {
         "title": "TypeScript",
         "body": "Strongly typed interfaces and tools in TypeScript ensure safety and predictability.",
-        "alt": "A TypeScript-inspired gradient with geometric accents."
+        "alt": "Abstract electric-blue blocks floating above a dark canvas."
       },
       "nodejs": {
         "title": "Node.js",
         "body": "Node.js services provide low-latency APIs, workers, and integration bridges for modern stacks.",
-        "alt": "A green abstraction referencing Node.js performance."
+        "alt": "Concentric neon rings radiating from a green core."
       },
       "fastApi": {
         "title": "FastAPI",
         "body": "FastAPI microservices expose fast, well-documented endpoints for automation scenarios.",
-        "alt": "Turquoise streaks symbolizing FastAPI speed."
+        "alt": "Tall teal curtains with luminous arcs flowing across midnight tones."
       },
       "reactSmallApps": {
         "title": "React for lightweight applications",
         "body": "We use React for lightweight applications and websites.",
-        "alt": "The React atom depicted as a compact widget."
+        "alt": "Luminous feather-like plume painted in lilac and aqua light."
       },
       "angularBigApps": {
         "title": "Angular for large applications",
         "body": "We use Angular for large enterprise applications.",
-        "alt": "An abstract panorama inspired by Angular for enterprise projects."
+        "alt": "Layered scarlet monolith rising from a deep crimson backdrop."
+      },
+      "androidAppsWidgets": {
+        "title": "Android apps & widgets",
+        "body": "Native Android companions and glanceable widgets that keep operations reachable right on the home screen.",
+        "alt": "Stacked lime tiles orbiting a gentle emerald glow."
       }
     }
   },

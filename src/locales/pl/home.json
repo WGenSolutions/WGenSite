@@ -50,7 +50,7 @@
       },
       "craft": {
         "title": "Perfekcja w każdym detalu",
-        "body": "Projektujemy unikalne doświadczenia premium. Opieramy się na danych, inżynierii wspieranej AI i nowoczesnych architekturach modułowych."
+        "body": "Projektujemy unikalne rozwiązania premium. Opieramy się na danych, inżynierii wspieranej AI i nowoczesnych architekturach modułowych."
       },
       "ownership": {
         "title": "Pełna własność",
@@ -85,32 +85,37 @@
       "python": {
         "title": "Python",
         "body": "Python napędza integracje danych, usługi integracyjne i rozszerzenia nasze Centrum Automatyzacji.",
-        "alt": "Abstrakcyjna fala w barwach Pythona."
+        "alt": "Warstwowe cyjanowe i limonkowe fale na nocnym tle."
       },
       "typescript": {
         "title": "TypeScript",
         "body": "Silnie typowane interfejsy i narzędzia w TypeScript zapewniają bezpieczeństwo i przewidywalność.",
-        "alt": "Gradient inspirowany TypeScriptem z geometrycznymi akcentami."
+        "alt": "Abstrakcyjne, niebieskie bloki unoszące się nad ciemnym tłem."
       },
       "nodejs": {
         "title": "Node.js",
         "body": "Usługi Node.js dostarczają niskolatencyjne API, workerów i mosty integracyjne dla nowoczesnych stacków.",
-        "alt": "Zielona abstrakcja nawiązująca do wydajności Node.js."
+        "alt": "Koncentryczne, neonowe pierścienie promieniujące z zielonego środka."
       },
       "fastApi": {
         "title": "FastAPI",
         "body": "Mikrousługi FastAPI udostępniają szybkie, dobrze udokumentowane endpointy do scenariuszy automatyzacji.",
-        "alt": "Turkusowe smugi symbolizujące prędkość FastAPI."
+        "alt": "Wysokie turkusowe kurtyny i świetliste łuki na nocnym tle."
       },
       "reactSmallApps": {
         "title": "React do lekkich aplikacji",
         "body": "React służy nam do lekkich aplikacji oraz stron www.",
-        "alt": "Atom Reacta przedstawiony jako kompaktowy widget."
+        "alt": "Świetlista, piórkowa smuga w odcieniach lawendy i turkusu."
       },
       "angularBigApps": {
         "title": "Angular do dużych aplikacji",
         "body": "Angular wykorzystujemy przy dużych aplikacjach korporacyjnych.",
-        "alt": "Abstrakcyjna panorama inspirowana Angular dla projektów enterprise."
+        "alt": "Warstwowy, szkarłatny monolit wyrastający z głębokiego tła."
+      },
+      "androidAppsWidgets": {
+        "title": "Aplikacje i widgety Android",
+        "body": "Natywne aplikacje Android i lekkie widgety zapewniają szybki dostęp do procesów prosto z ekranu głównego.",
+        "alt": "Ułożone warstwowo, limonkowe kafelki otaczające miękką poświatę."
       }
     }
   },
