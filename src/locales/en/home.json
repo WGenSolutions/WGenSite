@@ -60,62 +60,62 @@
   },
   "technologies": {
     "title": "Technologies we are strong in",
-    "subtitle": "We combine human creativity with AI acceleration.",
+    "subtitle": "We combine human creativity with the power of artificial intelligence.",
     "cards": {
       "humanCoders": {
-        "title": "Human Coders",
-        "body": "Experienced engineers design clear, scalable systems and support teams in maintaining a steady pace.",
-        "alt": "Abstract illustration of human coders collaborating."
+        "title": "Developers",
+        "body": "Our experienced specialists create clear and scalable solutions that grow together with your business. They also help teams maintain a steady and productive pace.",
+        "alt": "Abstract illustration of collaborating developers."
       },
       "aiCoders": {
         "title": "AI Coders",
-        "body": "Autonomous assistants prepare code, tests, and refactorings under expert supervision, reducing delivery time.",
-        "alt": "Neon shapes symbolizing human and AI collaboration in coding."
+        "body": "AI-powered assistants support our experts in writing and improving code, helping projects move faster and with greater precision.",
+        "alt": "Neon shapes symbolizing collaboration between humans and AI in coding."
       },
       "aiAutomations": {
         "title": "AI Automations",
-        "body": "AI-driven workflows coordinate classification, extraction, and recommendations in business processes.",
-        "alt": "A stylized automation network with AI signals."
+        "body": "Artificial intelligence automatically analyzes data, classifies information, and suggests the best solutions to streamline everyday business processes.",
+        "alt": "Stylized automation network with AI signals."
       },
       "hybridAutomations": {
         "title": "Hybrid Automations",
-        "body": "Combining LLM inference with deterministic rules guarantees repeatability of automations.",
-        "alt": "A diagram connecting neural networks with logical blocks."
+        "body": "We combine the power of AI with precise business rules to create reliable and repeatable process automations.",
+        "alt": "Diagram connecting neural networks with logical blocks."
       },
       "python": {
         "title": "Python",
-        "body": "Python powers data integrations, integration services, and extensions of our Automation Hub.",
-        "alt": "Layered cyan and lime waves over a midnight sky."
+        "body": "This versatile language helps us connect data and systems into a cohesive whole and expand our Automation Center.",
+        "alt": "Layered cyan and lime waves on a dark background."
       },
       "typescript": {
         "title": "TypeScript",
-        "body": "Strongly typed interfaces and tools in TypeScript ensure safety and predictability.",
-        "alt": "Abstract electric-blue blocks floating above a dark canvas."
+        "body": "It keeps our applications stable, predictable, and easy to maintain — just what modern businesses need.",
+        "alt": "Abstract blue blocks floating above a dark background."
       },
       "nodejs": {
         "title": "Node.js",
-        "body": "Node.js services provide low-latency APIs, workers, and integration bridges for modern stacks.",
-        "alt": "Concentric neon rings radiating from a green core."
+        "body": "It enables the creation of fast services and integrations between different systems — perfect for today’s dynamic IT environments.",
+        "alt": "Concentric neon rings radiating from a green center."
       },
       "fastApi": {
         "title": "FastAPI",
-        "body": "FastAPI microservices expose fast, well-documented endpoints for automation scenarios.",
-        "alt": "Tall teal curtains with luminous arcs flowing across midnight tones."
+        "body": "With this technology, we build lightweight, fast, and well-documented services that form the backbone of many of our automations.",
+        "alt": "Tall turquoise curtains and glowing arches on a night background."
       },
       "reactSmallApps": {
-        "title": "React for lightweight applications",
-        "body": "We use React for lightweight applications and websites.",
-        "alt": "Glowing micro-gliders streaking forward in cyan and violet, symbolizing agile intelligence."
+        "title": "React for Lightweight Apps",
+        "body": "We use React to build simple, intuitive apps and websites that run smoothly and look modern.",
+        "alt": "Glowing micro-gliders in cyan and violet symbolizing agility and intelligence."
       },
       "angularBigApps": {
-        "title": "Angular for large applications",
-        "body": "We use Angular for large enterprise applications.",
-        "alt": "Layered scarlet monolith rising from a deep crimson backdrop."
+        "title": "Angular for Large Applications",
+        "body": "Angular is ideal for large-scale corporate projects, offering stability and high performance.",
+        "alt": "Layered scarlet monolith rising from a deep background."
       },
       "androidAppsWidgets": {
-        "title": "Android apps & widgets",
-        "body": "Native Android companions and glanceable widgets that keep operations reachable right on the home screen.",
-        "alt": "Stacked lime tiles orbiting a gentle emerald glow."
+        "title": "Android Apps and Widgets",
+        "body": "We create native Android apps and handy widgets that let users access key features straight from their home screen.",
+        "alt": "Layered lime tiles surrounding a soft glow."
       }
     }
   },

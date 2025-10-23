@@ -58,63 +58,64 @@
       }
     }
   },
+
   "technologies": {
     "title": "Technologie, w których jesteśmy mocni",
-    "subtitle": "Łączymy kreatywność ludzi oraz przyspieszenie AI.",
+    "subtitle": "Łączymy kreatywność ludzi z możliwościami sztucznej inteligencji.",
     "cards": {
       "humanCoders": {
         "title": "Programiści",
-        "body": "Doświadczeni inżynierowie projektują przejrzyste, skalowalne systemy i wspierają zespoły w utrzymaniu stałego tempa.",
+        "body": "Nasi doświadczeni specjaliści tworzą czytelne i skalowalne rozwiązania, które rozwijają się razem z Twoją firmą. Pomagają też utrzymać stabilne tempo pracy zespołów.",
         "alt": "Abstrakcyjna ilustracja współpracujących programistów."
       },
       "aiCoders": {
         "title": "Koderzy AI",
-        "body": "Autonomiczni asystenci przygotowują kod, testy i refaktoryzacje pod okiem ekspertów, skracając czas dostaw.",
+        "body": "Asystenci oparci na sztucznej inteligencji wspierają naszych ekspertów w tworzeniu i ulepszaniu kodu, dzięki czemu projekty powstają szybciej i z większą precyzją.",
         "alt": "Neonowe kształty symbolizujące współpracę ludzi i AI przy kodowaniu."
       },
       "aiAutomations": {
         "title": "Automatyzacje AI",
-        "body": "Przepływy sterowane AI koordynują klasyfikację, ekstrakcję i rekomendacje w procesach biznesowych.",
+        "body": "Sztuczna inteligencja automatycznie analizuje dane, klasyfikuje informacje i podpowiada najlepsze rozwiązania, usprawniając codzienne procesy biznesowe.",
         "alt": "Stylizowana sieć automatyzacji z sygnałami AI."
       },
       "hybridAutomations": {
         "title": "Automatyzacje hybrydowe",
-        "body": "Połączenia wnioskowania LLM z deterministycznymi regułami gwarantują powtarzalność automatyzacji.",
+        "body": "Łączymy moc AI z precyzją reguł biznesowych, aby tworzyć niezawodne i powtarzalne automatyzacje procesów.",
         "alt": "Schemat łączący sieci neuronowe z logicznymi blokami."
       },
       "python": {
         "title": "Python",
-        "body": "Python napędza integracje danych, usługi integracyjne i rozszerzenia nasze Centrum Automatyzacji.",
+        "body": "Ten wszechstronny język pomaga nam łączyć dane i systemy w spójną całość, a także rozwijać nasze Centrum Automatyzacji.",
         "alt": "Warstwowe cyjanowe i limonkowe fale na nocnym tle."
       },
       "typescript": {
         "title": "TypeScript",
-        "body": "Silnie typowane interfejsy i narzędzia w TypeScript zapewniają bezpieczeństwo i przewidywalność.",
+        "body": "Dzięki niemu nasze aplikacje są stabilne, przewidywalne i łatwe w utrzymaniu — dokładnie takie, jakich potrzebują nowoczesne firmy.",
         "alt": "Abstrakcyjne, niebieskie bloki unoszące się nad ciemnym tłem."
       },
       "nodejs": {
         "title": "Node.js",
-        "body": "Usługi Node.js dostarczają niskolatencyjne API, workerów i mosty integracyjne dla nowoczesnych stacków.",
+        "body": "Umożliwia tworzenie szybkich usług i połączeń między różnymi systemami — idealnych dla współczesnych, dynamicznych środowisk IT.",
         "alt": "Koncentryczne, neonowe pierścienie promieniujące z zielonego środka."
       },
       "fastApi": {
         "title": "FastAPI",
-        "body": "Mikrousługi FastAPI udostępniają szybkie, dobrze udokumentowane endpointy do scenariuszy automatyzacji.",
+        "body": "Dzięki tej technologii tworzymy lekkie, szybkie i dobrze udokumentowane usługi, które stanowią podstawę wielu naszych automatyzacji.",
         "alt": "Wysokie turkusowe kurtyny i świetliste łuki na nocnym tle."
       },
       "reactSmallApps": {
         "title": "React do lekkich aplikacji",
-        "body": "React służy nam do lekkich aplikacji oraz stron www.",
+        "body": "Używamy Reacta do tworzenia prostych, intuicyjnych aplikacji i stron internetowych, które działają płynnie i wyglądają nowocześnie.",
         "alt": "Świetliste mikroszybowce w cyjanie i fiolecie symbolizujące zwinność i inteligencję."
       },
       "angularBigApps": {
         "title": "Angular do dużych aplikacji",
-        "body": "Angular wykorzystujemy przy dużych aplikacjach korporacyjnych.",
+        "body": "Angular sprawdza się w rozbudowanych projektach korporacyjnych, zapewniając stabilność i wysoką wydajność.",
         "alt": "Warstwowy, szkarłatny monolit wyrastający z głębokiego tła."
       },
       "androidAppsWidgets": {
         "title": "Aplikacje i widgety Android",
-        "body": "Natywne aplikacje Android i lekkie widgety zapewniają szybki dostęp do procesów prosto z ekranu głównego.",
+        "body": "Tworzymy natywne aplikacje i praktyczne widgety, które pozwalają szybko korzystać z ważnych funkcji prosto z ekranu telefonu.",
         "alt": "Ułożone warstwowo, limonkowe kafelki otaczające miękką poświatę."
       }
     }
