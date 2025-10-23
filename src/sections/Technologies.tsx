@@ -41,7 +41,7 @@ const TECH_TOPICS = [
         </g>
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_32px_rgba(59,130,246,0.32)]',
+  shadowClass: 'shadow-[0_0_18px_rgba(59,130,246,0.24)]',
   },
   {
     id: 'aiCoders',
@@ -81,7 +81,7 @@ const TECH_TOPICS = [
         </g>
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_30px_rgba(139,92,246,0.3)]',
+  shadowClass: 'shadow-[0_0_18px_rgba(139,92,246,0.24)]',
   },
   {
     id: 'aiAutomations',
@@ -105,7 +105,7 @@ const TECH_TOPICS = [
         </g>
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_30px_rgba(45,212,191,0.3)]',
+  shadowClass: 'shadow-[0_0_18px_rgba(45,212,191,0.24)]',
   },
   {
     id: 'hybridAutomations',
@@ -130,7 +130,7 @@ const TECH_TOPICS = [
         <path d="M140 104h40" stroke="#0f172a" stroke-width="6" stroke-linecap="round" opacity="0.4" />
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_30px_rgba(56,189,248,0.28)]',
+  shadowClass: 'shadow-[0_0_18px_rgba(56,189,248,0.22)]',
   },
   {
     id: 'python',
@@ -156,7 +156,7 @@ const TECH_TOPICS = [
         <circle cx="260" cy="90" r="10" fill="#fefce8" opacity="0.3" />
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_28px_rgba(250,204,21,0.28)]',
+  shadowClass: 'shadow-[0_0_18px_rgba(250,204,21,0.22)]',
   },
   {
     id: 'typescript',
@@ -183,7 +183,7 @@ const TECH_TOPICS = [
         <circle cx="246" cy="106" r="10" fill="#e0f2fe" opacity="0.4" />
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_28px_rgba(59,130,246,0.28)]',
+  shadowClass: 'shadow-[0_0_18px_rgba(59,130,246,0.22)]',
   },
   {
     id: 'nodejs',
@@ -214,7 +214,7 @@ const TECH_TOPICS = [
         <circle cx="160" cy="100" r="10" fill="#f0fdf4" opacity="0.6" />
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_28px_rgba(34,197,94,0.3)]',
+  shadowClass: 'shadow-[0_0_18px_rgba(34,197,94,0.24)]',
   },
   {
     id: 'fastApi',
@@ -245,37 +245,54 @@ const TECH_TOPICS = [
         <circle cx="228" cy="108" r="16" fill="#ccfbf1" opacity="0.38" />
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_28px_rgba(45,212,191,0.28)]',
+  shadowClass: 'shadow-[0_0_18px_rgba(45,212,191,0.22)]',
   },
   {
     id: 'reactSmallApps',
     illustration: createIllustration(`
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200">
         <defs>
-          <linearGradient id="reactFeatherBody" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#fdf4ff" />
-            <stop offset="55%" stop-color="#a5b4fc" />
+          <linearGradient id="reactFleetBody" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#f8fafc" />
+            <stop offset="40%" stop-color="#c4b5fd" />
             <stop offset="100%" stop-color="#38bdf8" />
           </linearGradient>
-          <radialGradient id="reactFeatherAura" cx="48%" cy="42%" r="70%">
+          <radialGradient id="reactFleetAura" cx="52%" cy="46%" r="68%">
             <stop offset="0%" stop-color="#bae6fd" stop-opacity="0.9" />
-            <stop offset="60%" stop-color="#c4b5fd" stop-opacity="0.35" />
-            <stop offset="100%" stop-color="#0f172a" stop-opacity="0" />
+            <stop offset="55%" stop-color="#a5b4fc" stop-opacity="0.35" />
+            <stop offset="100%" stop-color="#020617" stop-opacity="0" />
           </radialGradient>
         </defs>
-        <rect width="320" height="200" fill="#020618" />
-        <circle cx="164" cy="98" r="88" fill="#0f172a" opacity="0.55" />
-        <circle cx="164" cy="98" r="76" fill="url(#reactFeatherAura)" />
-        <g transform="rotate(-12 160 100)">
-          <path d="M92 156 C132 120 188 40 240 64 C212 94 168 150 132 176 Z" fill="url(#reactFeatherBody)" opacity="0.92" />
-          <path d="M124 118 C168 78 210 52 236 60" fill="none" stroke="#f8fafc" stroke-width="6" stroke-linecap="round" stroke-opacity="0.4" />
-          <path d="M110 140 C150 96 206 70 236 74" fill="none" stroke="#c4b5fd" stroke-width="4" stroke-linecap="round" stroke-opacity="0.45" />
+        <rect width="320" height="200" fill="#010516" />
+        <circle cx="160" cy="100" r="84" fill="#0f172a" opacity="0.55" />
+        <circle cx="160" cy="100" r="72" fill="url(#reactFleetAura)" />
+        <g fill="none" stroke="#38bdf8" stroke-opacity="0.25" stroke-width="2">
+          <path d="M56 160 L 264 64" />
+          <path d="M72 176 L 280 80" />
+          <path d="M40 144 L 248 48" />
         </g>
-        <circle cx="118" cy="70" r="10" fill="#f5f3ff" opacity="0.45" />
-        <circle cx="236" cy="134" r="12" fill="#bae6fd" opacity="0.35" />
+        <g>
+          <g transform="translate(110 96)">
+            <path d="M0 32 C14 16 48 -8 76 -2 C56 8 26 28 10 42 Z" fill="url(#reactFleetBody)" />
+            <path d="M64 -4 C54 6 32 28 18 36" fill="none" stroke="#f8fafc" stroke-width="4" stroke-linecap="round" stroke-opacity="0.5" />
+            <circle cx="68" cy="-6" r="6" fill="#f8fafc" opacity="0.8" />
+          </g>
+          <g transform="translate(168 110) scale(0.72)">
+            <path d="M0 32 C14 16 48 -8 76 -2 C56 8 26 28 10 42 Z" fill="url(#reactFleetBody)" opacity="0.8" />
+            <path d="M64 -4 C54 6 32 28 18 36" fill="none" stroke="#e0f2fe" stroke-width="4" stroke-linecap="round" stroke-opacity="0.45" />
+            <circle cx="68" cy="-6" r="6" fill="#e0f2fe" opacity="0.75" />
+          </g>
+          <g transform="translate(206 124) scale(0.5)">
+            <path d="M0 32 C14 16 48 -8 76 -2 C56 8 26 28 10 42 Z" fill="url(#reactFleetBody)" opacity="0.7" />
+            <path d="M64 -4 C54 6 32 28 18 36" fill="none" stroke="#dbeafe" stroke-width="4" stroke-linecap="round" stroke-opacity="0.4" />
+            <circle cx="68" cy="-6" r="6" fill="#dbeafe" opacity="0.7" />
+          </g>
+        </g>
+        <circle cx="104" cy="74" r="10" fill="#f8fafc" opacity="0.42" />
+        <circle cx="236" cy="146" r="12" fill="#bae6fd" opacity="0.32" />
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_30px_rgba(56,189,248,0.28)]',
+    shadowClass: 'shadow-[0_0_18px_rgba(56,189,248,0.18)]',
   },
   {
     id: 'angularBigApps',
@@ -302,7 +319,7 @@ const TECH_TOPICS = [
         <circle cx="208" cy="142" r="8" fill="#fca5a5" opacity="0.4" />
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_32px_rgba(239,68,68,0.28)]',
+    shadowClass: 'shadow-[0_0_18px_rgba(239,68,68,0.2)]',
   },
   {
     id: 'androidAppsWidgets',
@@ -327,7 +344,7 @@ const TECH_TOPICS = [
         <circle cx="200" cy="52" r="10" fill="#bbf7d0" opacity="0.5" />
       </svg>
     `),
-    shadowClass: 'shadow-[0_0_30px_rgba(34,197,94,0.32)]',
+    shadowClass: 'shadow-[0_0_18px_rgba(34,197,94,0.22)]',
   },
 ] as const satisfies readonly {
   id:
@@ -363,18 +380,18 @@ export const Technologies = () => {
     const _container = _containerRef.current
     if (!_container) return undefined
 
-  const _mediaQuery = window.matchMedia('(min-width: 768px)')
-  const _shouldAutoScroll = _mediaQuery.matches && _container.scrollWidth > _container.clientWidth
+    const _mediaQuery = window.matchMedia('(min-width: 768px)')
+    const _shouldAutoScroll = _mediaQuery.matches && _container.scrollWidth > _container.clientWidth
 
     let _rafId: number | null = null
     let _scrollDirection = 1
     let _isPaused = false
     let _resumeTimeout: ReturnType<typeof setTimeout> | null = null
-  let _autoScrollActive = _shouldAutoScroll
-  let _isDragging = false
-  let _activePointerId: number | null = null
-  let _dragStartX = 0
-  let _dragStartScrollLeft = 0
+    let _autoScrollActive = _shouldAutoScroll
+    let _isDragging = false
+    let _activePointerId: number | null = null
+    let _dragStartX = 0
+    let _dragStartScrollLeft = 0
 
     const _step = () => {
       const _maxScroll = _container.scrollWidth - _container.clientWidth
@@ -541,13 +558,13 @@ export const Technologies = () => {
       if (_resumeTimeout !== null) {
         window.clearTimeout(_resumeTimeout)
       }
-  _container.removeEventListener('wheel', _handleHoverInteraction)
-  _container.removeEventListener('pointerdown', _handlePointerDown)
-  _container.removeEventListener('pointermove', _handlePointerMove)
-  _container.removeEventListener('pointerup', _handlePointerUp)
-  _container.removeEventListener('pointercancel', _handlePointerCancel)
-  _container.removeEventListener('pointerleave', _handlePointerLeave)
-  _container.removeEventListener('pointerenter', _handlePointerEnter)
+      _container.removeEventListener('wheel', _handleHoverInteraction)
+      _container.removeEventListener('pointerdown', _handlePointerDown)
+      _container.removeEventListener('pointermove', _handlePointerMove)
+      _container.removeEventListener('pointerup', _handlePointerUp)
+      _container.removeEventListener('pointercancel', _handlePointerCancel)
+      _container.removeEventListener('pointerleave', _handlePointerLeave)
+      _container.removeEventListener('pointerenter', _handlePointerEnter)
       if (_supportsModernMqApi) {
         _mediaQuery.removeEventListener('change', _handleMediaChange)
       } else {
@@ -580,7 +597,7 @@ export const Technologies = () => {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] as const }}
         >
-          <div className="flex min-w-full snap-x snap-mandatory gap-6 pr-6 sm:gap-8">
+          <div className="flex min-w-full snap-x snap-mandatory gap-6 px-6 sm:gap-8 sm:px-10">
             {TECH_TOPICS.map((topic, index) => (
               <motion.article
                 key={topic.id}
