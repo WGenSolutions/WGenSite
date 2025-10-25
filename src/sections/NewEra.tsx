@@ -4,45 +4,6 @@ import { useTranslation } from 'react-i18next'
 import Section from '../components/Section'
 
 /**
- * Soft-focus aurora layers that paint the heavenly background in the New Era section.
- */
-const CELESTIAL_LAYERS = [
-  {
-    id: 'dawn',
-    className:
-      'absolute -top-1/3 left-[45%] h-[30rem] w-[30rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_top,_rgba(192,132,252,0.75),_rgba(56,189,248,0.35),_transparent_70%)] blur-[120px]',
-    duration: 18,
-    delay: 0,
-  },
-  {
-    id: 'zenith',
-    className:
-      'absolute -bottom-28 right-[12%] h-[24rem] w-[24rem] rounded-full bg-[conic-gradient(from_180deg_at_50%_50%,rgba(56,189,248,0.55),rgba(244,114,182,0.45),rgba(129,140,248,0.55),transparent_75%)] blur-[110px]',
-    duration: 20,
-    delay: 0.6,
-  },
-  {
-    id: 'halo',
-    className:
-      'absolute top-10 left-[10%] h-[22rem] w-[22rem] rounded-[999px] bg-[radial-gradient(circle_at_center,_rgba(255,176,126,0.55),_rgba(248,113,113,0.25),_transparent_70%)] blur-[110px]',
-    duration: 24,
-    delay: 1.1,
-  },
-  {
-    id: 'nebula',
-    className:
-      'absolute -bottom-12 left-1/4 h-[26rem] w-[26rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle_at_bottom,_rgba(34,211,238,0.6),_rgba(186,230,253,0.25),_transparent_70%)] blur-[120px]',
-    duration: 26,
-    delay: 1.6,
-  },
-] as const satisfies readonly {
-  id: string
-  className: string
-  duration: number
-  delay: number
-}[]
-
-/**
  * Floating light particles that reinforce the "splendid heaven" atmosphere.
  */
 const STARFIELD = [
@@ -101,30 +62,6 @@ const STARFIELD = [
   color: string
 }[]
 
-/**
- * Flowing ribbons adding richer chroma transitions across the manifesto canvas.
- */
-const SPECTRUM_RIBBONS = [
-  {
-    id: 'aurora-east',
-    className:
-      'absolute -right-20 top-12 h-[22rem] w-[10rem] rotate-[18deg] bg-gradient-to-b from-cyan-300/50 via-indigo-400/40 to-fuchsia-400/40 blur-[90px]',
-    duration: 18,
-    delay: 0.4,
-  },
-  {
-    id: 'aurora-west',
-    className:
-      'absolute -left-24 bottom-6 h-[20rem] w-[12rem] -rotate-[24deg] bg-gradient-to-t from-rose-400/40 via-amber-300/35 to-sky-300/45 blur-[95px]',
-    duration: 22,
-    delay: 1.2,
-  },
-] as const satisfies readonly {
-  id: string
-  className: string
-  duration: number
-  delay: number
-}[]
 
 /**
  * Identifiers used to fetch translated highlight copy for the New Era manifesto.
@@ -148,44 +85,6 @@ export const NewEra = () => {
       <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0b1025]/80 p-8 shadow-[0_0_80px_rgba(88,97,255,0.2)] sm:p-12">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(129,140,248,0.25),transparent_55%),radial-gradient(circle_at_bottom_left,_rgba(6,182,212,0.3),transparent_60%)]" aria-hidden="true" />
         <div className="pointer-events-none absolute inset-0 -z-10">
-          {CELESTIAL_LAYERS.map((layer) => (
-            <motion.div
-              key={layer.id}
-              className={layer.className}
-              initial={_prefersReducedMotion ? { opacity: 0.45 } : { opacity: 0.2, scale: 0.9 }}
-              animate={
-                _prefersReducedMotion
-                  ? undefined
-                  : { opacity: [0.25, 0.55, 0.25], scale: [0.92, 1.05, 0.92], rotate: [0, 2, -1, 0] }
-              }
-              transition={{ duration: layer.duration, delay: layer.delay, repeat: Infinity, ease: 'easeInOut' }}
-              aria-hidden="true"
-            />
-          ))}
-
-          {SPECTRUM_RIBBONS.map((ribbon) => (
-            <motion.div
-              key={ribbon.id}
-              className={ribbon.className}
-              initial={
-                _prefersReducedMotion
-                  ? { opacity: 0.55 }
-                  : { opacity: 0.25, scaleY: 0.9 }
-              }
-              animate={
-                _prefersReducedMotion
-                  ? undefined
-                  : {
-                      opacity: [0.3, 0.65, 0.3],
-                      scaleY: [0.9, 1.1, 0.94],
-                      x: [0, 12, -6, 0],
-                    }
-              }
-              transition={{ duration: ribbon.duration, delay: ribbon.delay, repeat: Infinity, ease: 'easeInOut' }}
-              aria-hidden="true"
-            />
-          ))}
-
           {STARFIELD.map((spark) => (
             <motion.span
               key={spark.id}
@@ -228,7 +127,7 @@ export const NewEra = () => {
             </p>
             <motion.a
               href="#contact"
-              className="relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-white/20 bg-gradient-to-r from-fuchsia-400 via-indigo-400 to-sky-400 px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-900 shadow-[0_12px_40px_-18px_rgba(56,189,248,0.8)] transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-200"
+              className="relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-white/20 bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-900 shadow-[0_12px_40px_-18px_rgba(56,189,248,0.8)] transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-200"
               initial={_prefersReducedMotion ? undefined : { opacity: 0, y: 16 }}
               whileInView={_prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}

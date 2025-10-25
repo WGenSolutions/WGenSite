@@ -1,7 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 import { useReducedMotion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Section from '../components/Section'
+import { useTechnologyCarousel } from '../hooks/useTechnologyCarousel'
 
 /**
  * Encodes inline SVG markup as a data URI for technology tile artwork.
@@ -448,208 +449,10 @@ export const Technologies = () => {
   const { t: _t } = useTranslation('home')
   const _prefersReducedMotion = useReducedMotion()
   const _containerRef = useRef<HTMLDivElement | null>(null)
+  /** Ensures the auto-scroll hook receives a deterministic reduced-motion flag. */
+  const _shouldReduceMotion = Boolean(_prefersReducedMotion)
 
-  /**
-   * Auto-scrolls the technology carousel on larger screens while supporting drag-to-scroll interactions.
-   */
-  useEffect(() => {
-    if (_prefersReducedMotion) return undefined
-    if (typeof window === 'undefined') return undefined
-    const _container = _containerRef.current
-    if (!_container) return undefined
-
-    const _mediaQuery = window.matchMedia('(min-width: 768px)')
-    const _shouldAutoScroll = _mediaQuery.matches && _container.scrollWidth > _container.clientWidth
-
-    let _rafId: number | null = null
-    let _scrollDirection = 1
-    let _isPaused = false
-    let _resumeTimeout: ReturnType<typeof setTimeout> | null = null
-    let _autoScrollActive = _shouldAutoScroll
-    let _isDragging = false
-    let _activePointerId: number | null = null
-    let _dragStartX = 0
-    let _dragStartScrollLeft = 0
-
-    const _step = () => {
-      const _maxScroll = _container.scrollWidth - _container.clientWidth
-      if (_maxScroll <= 0) {
-        _isPaused = true
-        if (_rafId !== null) {
-          window.cancelAnimationFrame(_rafId)
-          _rafId = null
-        }
-        return
-      }
-
-      _container.scrollLeft += 0.6 * _scrollDirection
-
-      if (_container.scrollLeft <= 0) {
-        _scrollDirection = 1
-      } else if (_container.scrollLeft >= _maxScroll) {
-        _scrollDirection = -1
-      }
-
-      if (!_isPaused) {
-        _rafId = window.requestAnimationFrame(_step)
-      }
-    }
-
-    const _start = () => {
-      if (!_autoScrollActive) return
-      if (_rafId === null && !_isPaused) {
-        _rafId = window.requestAnimationFrame(_step)
-      }
-    }
-
-    const _scheduleResume = () => {
-      if (_resumeTimeout !== null) {
-        window.clearTimeout(_resumeTimeout)
-      }
-      _resumeTimeout = window.setTimeout(() => {
-        if (!_autoScrollActive) {
-          _isPaused = true
-          return
-        }
-        _isPaused = false
-        _start()
-      }, 2400)
-    }
-
-    const _pause = (_shouldSchedule = true) => {
-      _isPaused = true
-      if (_rafId !== null) {
-        window.cancelAnimationFrame(_rafId)
-        _rafId = null
-      }
-      if (_shouldSchedule) {
-        _scheduleResume()
-      }
-    }
-
-    const _handleHoverInteraction = () => {
-      _pause()
-    }
-
-    const _handlePointerDown = (event: PointerEvent) => {
-      if (event.pointerType === 'mouse' && event.button !== 0) return
-      _pause(false)
-      _isDragging = true
-      _activePointerId = event.pointerId
-      _dragStartX = event.clientX
-      _dragStartScrollLeft = _container.scrollLeft
-      _container.classList.add('select-none')
-      try {
-        _container.setPointerCapture(event.pointerId)
-      } catch (_error) {
-        // Ignore pointer capture availability issues
-      }
-    }
-
-    const _handlePointerMove = (event: PointerEvent) => {
-      if (!_isDragging || event.pointerId !== _activePointerId) return
-      event.preventDefault()
-      const _deltaX = event.clientX - _dragStartX
-      _container.scrollLeft = _dragStartScrollLeft - _deltaX
-    }
-
-    const _endDrag = (event?: PointerEvent) => {
-      if (!_isDragging) return
-      if (event && event.pointerId !== _activePointerId) return
-      if (_activePointerId !== null) {
-        try {
-          _container.releasePointerCapture(_activePointerId)
-        } catch (_error) {
-          // Ignore pointer capture release issues
-        }
-      }
-      _isDragging = false
-      _activePointerId = null
-      _container.classList.remove('select-none')
-      _scheduleResume()
-    }
-
-    const _handlePointerUp = (event: PointerEvent) => {
-      _endDrag(event)
-    }
-
-    const _handlePointerCancel = (event: PointerEvent) => {
-      _endDrag(event)
-    }
-
-    const _handlePointerLeave = (event: PointerEvent) => {
-      if (_isDragging) {
-        _endDrag(event)
-        return
-      }
-      _container.classList.remove('select-none')
-      _pause()
-    }
-
-    const _handlePointerEnter = () => {
-      if (_isDragging) return
-      _container.classList.remove('select-none')
-      _pause()
-    }
-
-    const _handleMediaChange = (event: MediaQueryListEvent) => {
-      const _isScrollable = _container.scrollWidth > _container.clientWidth
-      _autoScrollActive = event.matches && _isScrollable
-
-      if (!_autoScrollActive) {
-        _pause(false)
-        return
-      }
-
-      if (_resumeTimeout !== null) {
-        window.clearTimeout(_resumeTimeout)
-        _resumeTimeout = null
-      }
-
-      _isPaused = false
-      _start()
-    }
-
-    if (_autoScrollActive) {
-      _start()
-    }
-
-    _container.addEventListener('wheel', _handleHoverInteraction, { passive: true })
-    _container.addEventListener('pointerdown', _handlePointerDown)
-    _container.addEventListener('pointermove', _handlePointerMove, { passive: false })
-    _container.addEventListener('pointerup', _handlePointerUp)
-    _container.addEventListener('pointercancel', _handlePointerCancel)
-    _container.addEventListener('pointerleave', _handlePointerLeave)
-    _container.addEventListener('pointerenter', _handlePointerEnter)
-
-    const _supportsModernMqApi = typeof _mediaQuery.addEventListener === 'function'
-    if (_supportsModernMqApi) {
-      _mediaQuery.addEventListener('change', _handleMediaChange)
-    } else {
-      _mediaQuery.addListener(_handleMediaChange)
-    }
-
-    return () => {
-      if (_rafId !== null) {
-        window.cancelAnimationFrame(_rafId)
-      }
-      if (_resumeTimeout !== null) {
-        window.clearTimeout(_resumeTimeout)
-      }
-      _container.removeEventListener('wheel', _handleHoverInteraction)
-      _container.removeEventListener('pointerdown', _handlePointerDown)
-      _container.removeEventListener('pointermove', _handlePointerMove)
-      _container.removeEventListener('pointerup', _handlePointerUp)
-      _container.removeEventListener('pointercancel', _handlePointerCancel)
-      _container.removeEventListener('pointerleave', _handlePointerLeave)
-      _container.removeEventListener('pointerenter', _handlePointerEnter)
-      if (_supportsModernMqApi) {
-        _mediaQuery.removeEventListener('change', _handleMediaChange)
-      } else {
-        _mediaQuery.removeListener(_handleMediaChange)
-      }
-    }
-  }, [_prefersReducedMotion])
+  useTechnologyCarousel(_containerRef, _shouldReduceMotion)
 
   return (
     <Section
@@ -660,22 +463,14 @@ export const Technologies = () => {
     >
       <div className="relative">
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background via-background/90 to-transparent"
-          aria-hidden="true"
-        />
-        <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background via-background/90 to-transparent"
-          aria-hidden="true"
-        />
-        <div
           ref={_containerRef}
-          className="overflow-x-auto pb-6 sm:pb-8 scrollbar-hidden md:cursor-grab md:active:cursor-grabbing"
+          className="relative overflow-x-auto rounded-[1.75rem] bg-background/30 pb-6 pl-6 pr-8 backdrop-blur-sm scrollbar-soft sm:pb-8 sm:pl-10 sm:pr-14 md:rounded-[2.5rem] md:bg-background/20 md:pl-16 md:pr-20 md:backdrop-blur-lg md:[mask-image:linear-gradient(to_right,transparent,rgba(0,0,0,1)_6%,rgba(0,0,0,1)_94%,transparent)] md:[mask-mode:alpha] md:[mask-repeat:no-repeat]"
         >
-          <div className="flex min-w-full snap-x snap-mandatory gap-6 px-6 sm:gap-8 sm:px-10">
+          <div className="flex min-w-full snap-x snap-mandatory gap-6 after:flex-shrink-0 after:content-[''] after:w-10 sm:gap-8 sm:after:w-14 md:after:w-20">
             {TECH_TOPICS.map(topic => (
-                <article
+              <article
               key={topic.id}
-              className={`group relative flex min-h-[22rem] w-[18rem] min-w-[18rem] snap-center flex-col items-start gap-5 rounded-[28px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md transition hover:border-white/20 hover:bg-white/[0.07] ${topic.shadowClass}`}
+              className={`relative flex min-h-[22rem] w-[18rem] min-w-[18rem] snap-center flex-col items-start gap-5 rounded-[28px] border border-white/10 bg-white/[0.04] p-6 backdrop-blur-md hover:border-white/20 hover:bg-white/[0.07] ${topic.shadowClass}`}
                 >
               <div className="w-full overflow-hidden rounded-2xl border border-white/10">
               <img
