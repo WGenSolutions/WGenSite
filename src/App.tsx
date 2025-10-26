@@ -31,6 +31,33 @@ function LocalizedRoute() {
   const _activeLanguage = (_i18n.resolvedLanguage || _i18n.language || DEFAULT_LANGUAGE).split('-')[0]
 
   useEffect(() => {
+    const _normalizedPathname = _location.pathname.replace(/^\/+/u, '').replace(/\/+$/u, '')
+    if (_normalizedPathname.length === 0) {
+      return
+    }
+    const _pathSegments = _normalizedPathname.split('/')
+    const _maybeLanguageSegment = (_pathSegments[0] ?? '').toLowerCase()
+    if (!SUPPORTED_LANGUAGE_SET.has(_maybeLanguageSegment)) {
+      return
+    }
+    const _remainingSegments = _pathSegments.slice(1)
+    const _basePath = _remainingSegments.length > 0 ? `/${_remainingSegments.join('/')}` : '/'
+    const _hasTrailingSlash = _location.pathname.endsWith('/')
+    const _nextPathname = _hasTrailingSlash && _basePath !== '/' ? `${_basePath}/` : _basePath
+    const _nextSearchParams = new URLSearchParams(_location.search)
+    _nextSearchParams.set('lang', _maybeLanguageSegment)
+    const _searchString = _nextSearchParams.toString()
+    _navigate(
+      {
+        pathname: _nextPathname,
+        search: _searchString.length > 0 ? `?${_searchString}` : '',
+        hash: _location.hash,
+      },
+      { replace: true },
+    )
+  }, [_location.hash, _location.pathname, _location.search, _navigate])
+
+  useEffect(() => {
     if (_isSupportedLanguage) {
       return
     }
