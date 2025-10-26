@@ -20,6 +20,9 @@ const DEFAULT_EMAIL = 'wgen.solutions@gmail.com'
 const sharedImage = `${SITE_URL}images/logo.svg`
 const GA_MEASUREMENT_ID = 'G-3690LFEG71'
 
+/**
+ * Renders localized SEO metadata to expose all language variants to crawlers.
+ */
 export function Seo() {
   const { t: _t, i18n: _i18n } = useTranslation(['common'])
   const _location = useLocation()
@@ -30,26 +33,45 @@ export function Seo() {
   const _siteName = _t('common:brand.name')
   const _ogImageAlt = _t('common:meta.ogImageAlt', { defaultValue: '' })
   const _twitterHandle = _t('common:meta.twitterHandle', { defaultValue: '' })
-  const _canonicalUrl = useMemo(() => {
+  // Derives the localized slug for reuse across canonical and alternate URLs.
+  const _slug = useMemo(() => {
     const _pathSegments = _location.pathname.split('/').filter(Boolean)
-    const _slugSegments = _pathSegments.slice(1)
+    if (_pathSegments.length <= 1) {
+      return ''
+    }
+    return _pathSegments
+      .slice(1)
+      .join('/')
+      .replace(/\/+$/, '')
+  }, [_location.pathname])
+  const _canonicalUrl = useMemo(() => {
     const _languageSegment = LANGUAGE_ROUTE_SEGMENTS[_language] ?? LANGUAGE_ROUTE_SEGMENTS.en
-    const _slug = _slugSegments.join('/')
     const _baseUrl = `${SITE_URL}${_languageSegment}`
     if (_slug.length === 0) {
       return `${_baseUrl}/`
     }
-    return `${_baseUrl}/${_slug.replace(/\/+$/, '')}/`
-  }, [_language, _location.pathname])
+    return `${_baseUrl}/${_slug}/`
+  }, [_language, _slug])
   const _locale = OG_LOCALE[_language] ?? OG_LOCALE.en
+  // Builds hreflang-aware alternates for every supported language.
   const _alternateLinks = useMemo(
     () =>
-      Object.entries(LANGUAGE_ROUTE_SEGMENTS).map(([lng, segment]) => ({
-        hrefLang: lng,
-        href: `${SITE_URL}${segment}/`,
-      })),
-    [],
+      Object.entries(LANGUAGE_ROUTE_SEGMENTS).map(([_lng, _segment]) => {
+        const _alternateBase = `${SITE_URL}${_segment}`
+        const _href = _slug.length === 0 ? `${_alternateBase}/` : `${_alternateBase}/${_slug}/`
+        return {
+          hrefLang: _lng,
+          href: _href,
+          ogLocale: OG_LOCALE[_lng] ?? OG_LOCALE.en,
+        }
+      }),
+    [_slug],
   )
+  // Ensures search engines treat the English variant as the default language.
+  const _xDefaultAlternate = useMemo(() => {
+    const _englishAlternate = _alternateLinks.find((_link) => _link.hrefLang === 'en')
+    return _englishAlternate?.href ?? `${SITE_URL}`
+  }, [_alternateLinks])
 
   const _structuredData = useMemo(
     () =>
@@ -87,6 +109,11 @@ export function Seo() {
       <meta property="og:site_name" content={_siteName} />
       <meta property="og:locale" content={_locale} />
       <meta property="og:image" content={sharedImage} />
+      {_alternateLinks
+        .filter((_link) => _link.ogLocale !== _locale)
+        .map((_link) => (
+          <meta key={`og-locale-${_link.hrefLang}`} property="og:locale:alternate" content={_link.ogLocale} />
+        ))}
       {_ogImageAlt && <meta property="og:image:alt" content={_ogImageAlt} />}
       <meta property="og:image:type" content="image/png" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -95,10 +122,10 @@ export function Seo() {
       <meta name="twitter:image" content={sharedImage} />
       {_twitterHandle && <meta name="twitter:creator" content={_twitterHandle} />}
       <link rel="canonical" href={_canonicalUrl} />
-      {_alternateLinks.map((link) => (
-        <link key={link.hrefLang} rel="alternate" hrefLang={link.hrefLang} href={link.href} />
+      {_alternateLinks.map((_link) => (
+        <link key={_link.hrefLang} rel="alternate" hrefLang={_link.hrefLang} href={_link.href} />
       ))}
-      <link rel="alternate" hrefLang="x-default" href={`${SITE_URL}`} />
+      <link rel="alternate" hrefLang="x-default" href={_xDefaultAlternate} />
       <script type="application/ld+json">{_structuredData}</script>
       {GA_MEASUREMENT_ID ? (
         <>
