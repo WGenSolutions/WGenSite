@@ -87,12 +87,17 @@ export default function LanguageSwitcher() {
     _setOpen(false);
     if (code !== _currentLanguage) {
       await _i18n.changeLanguage(code);
-      const _pathSegments = _location.pathname.split("/").filter(Boolean);
-      const _segments = _pathSegments.length > 0 ? [..._pathSegments] : [code];
-      _segments[0] = code;
-      const _normalizedPathname = `/${_segments.join("/")}/`;
-      const _nextUrl = `${_normalizedPathname}${_location.search}${_location.hash}`;
-      _navigate(_nextUrl, { replace: false });
+      const _nextSearchParams = new URLSearchParams(_location.search);
+      _nextSearchParams.set("lang", code);
+      const _searchString = _nextSearchParams.toString();
+      _navigate(
+        {
+          pathname: _location.pathname || "/",
+          search: _searchString.length > 0 ? `?${_searchString}` : "",
+          hash: _location.hash,
+        },
+        { replace: false }
+      );
     }
   };
 

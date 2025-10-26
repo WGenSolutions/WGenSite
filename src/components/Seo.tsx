@@ -8,10 +8,6 @@ const OG_LOCALE: Record<string, string> = {
   en: 'en_US',
   pl: 'pl_PL',
 }
-const LANGUAGE_ROUTE_SEGMENTS: Record<string, string> = {
-  en: 'en',
-  pl: 'pl',
-}
 const SOCIAL_PROFILES = [
   'https://www.linkedin.com/company/wgensolutions',
   'https://github.com/WGenSolutions',
@@ -35,37 +31,33 @@ export function Seo() {
   const _twitterHandle = _t('common:meta.twitterHandle', { defaultValue: '' })
   // Derives the localized slug for reuse across canonical and alternate URLs.
   const _slug = useMemo(() => {
-    const _pathSegments = _location.pathname.split('/').filter(Boolean)
-    if (_pathSegments.length <= 1) {
-      return ''
-    }
-    return _pathSegments
-      .slice(1)
-      .join('/')
-      .replace(/\/+$/, '')
+    const _normalizedPath = _location.pathname.replace(/^\/+/u, '').replace(/\/+$/u, '')
+    return _normalizedPath
   }, [_location.pathname])
-  const _canonicalUrl = useMemo(() => {
-    const _languageSegment = LANGUAGE_ROUTE_SEGMENTS[_language] ?? LANGUAGE_ROUTE_SEGMENTS.en
-    const _baseUrl = `${SITE_URL}${_languageSegment}`
+  const _canonicalBase = useMemo(() => {
     if (_slug.length === 0) {
-      return `${_baseUrl}/`
+      return SITE_URL
     }
-    return `${_baseUrl}/${_slug}/`
-  }, [_language, _slug])
+    return `${SITE_URL}${_slug}/`
+  }, [_slug])
+  const _canonicalUrl = useMemo(() => {
+    const _encodedLanguage = encodeURIComponent(_language)
+    return `${_canonicalBase}?lang=${_encodedLanguage}`
+  }, [_canonicalBase, _language])
   const _locale = OG_LOCALE[_language] ?? OG_LOCALE.en
   // Builds hreflang-aware alternates for every supported language.
   const _alternateLinks = useMemo(
     () =>
-      Object.entries(LANGUAGE_ROUTE_SEGMENTS).map(([_lng, _segment]) => {
-        const _alternateBase = `${SITE_URL}${_segment}`
-        const _href = _slug.length === 0 ? `${_alternateBase}/` : `${_alternateBase}/${_slug}/`
+      Object.entries(OG_LOCALE).map(([_lng, _ogLocaleCode]) => {
+        const _encodedLanguage = encodeURIComponent(_lng)
+        const _href = `${_canonicalBase}?lang=${_encodedLanguage}`
         return {
           hrefLang: _lng,
           href: _href,
-          ogLocale: OG_LOCALE[_lng] ?? OG_LOCALE.en,
+          ogLocale: _ogLocaleCode ?? OG_LOCALE.en,
         }
       }),
-    [_slug],
+    [_canonicalBase],
   )
   // Ensures search engines treat the English variant as the default language.
   const _xDefaultAlternate = useMemo(() => {
