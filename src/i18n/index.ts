@@ -34,10 +34,11 @@ i18n
     defaultNS: 'common',
     ns: ['common', 'home'],
     detection: {
-      order: ['localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'querystring'],
+      order: ['path', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag', 'querystring'],
       caches: ['localStorage'],
       lookupLocalStorage: 'wgen-language',
       lookupSessionStorage: 'wgen-language',
+      lookupFromPathIndex: 0,
     },
     interpolation: { escapeValue: false },
     react: {
