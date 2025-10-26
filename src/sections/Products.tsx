@@ -1,7 +1,6 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import Section from '../components/Section'
-import { Sparkles } from 'lucide-react'
 
 export const Products = () => {
   const { t } = useTranslation('home')
@@ -34,7 +33,7 @@ export const Products = () => {
         {features.map((feature) => (
           <motion.li
             key={feature}
-            className="flex items-start gap-2 rounded-2xl border border-white/10 bg-background/70 p-4 text-left"
+            className="flex items-start gap-2 rounded-2xl bg-blue-800/10 border border-white/10 bg-background/70 p-4 text-left"
             whileHover={
           prefersReducedMotion
             ? undefined
@@ -46,10 +45,6 @@ export const Products = () => {
             whileTap={prefersReducedMotion ? undefined : { scale: 0.99 }}
             transition={{ duration: 0.25, ease: [0.24, 0.8, 0.25, 1] as const }}
           >
-            <span
-          className="mt-1 inline-flex h-2.5 w-2.5 flex-none rounded-full bg-accent shadow-[0_0_12px_rgba(54,230,255,0.6)]"
-          aria-hidden="true"
-            />
             <span className="leading-relaxed text-foreground/90">{feature}</span>
           </motion.li>
         ))}

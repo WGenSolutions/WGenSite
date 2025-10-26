@@ -10,7 +10,7 @@ export const Hobby = () => {
   return (
     <Section id="hobby" title={t('hobby.title')}>
       <motion.div
-        className="grid gap-6 rounded-3xl border border-accent/40 bg-background/70 p-8 md:grid-cols-[minmax(0,260px)_1fr] md:items-center"
+        className="grid gap-6 rounded-3xl border border-white/20  bg-background/70 p-8 md:grid-cols-[minmax(0,260px)_1fr] md:items-center"
         initial={prefersReducedMotion ? undefined : { opacity: 0, y: 24 }}
         whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.12 }}
