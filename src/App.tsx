@@ -60,9 +60,9 @@ function App() {
         <AuroraBackground />
         <Hero />
         <Offer />
-    <NewEra />
-    <Technologies />
+        <NewEra />
         <Products />
+        <Technologies />        
         <Experience />
         <About />
         <Hobby />
