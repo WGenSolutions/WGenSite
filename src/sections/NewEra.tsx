@@ -127,7 +127,7 @@ export const NewEra = () => {
             </p>
             <motion.a
               href="#contact"
-              className="relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full border border-white/20 bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-900 shadow-[0_12px_40px_-18px_rgba(56,189,248,0.8)] transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-200"
+              className="relative inline-flex items-center justify-center gap-2 overflow-hidden rounded border border-white/20 bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-slate-200 shadow-[0_12px_40px_-18px_rgba(56,189,248,0.8)] transition hover:brightness-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-200"
               initial={_prefersReducedMotion ? undefined : { opacity: 0, y: 16 }}
               whileInView={_prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.4 }}

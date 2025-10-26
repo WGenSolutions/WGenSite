@@ -28,10 +28,7 @@ export const Products = () => {
           />
         </div>
         <div className="relative flex flex-col gap-6 md:w-3/5">
-          <div className="inline-flex items-center gap-2 self-start rounded-full border border-white/10 bg-background/60 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-accent">
-        <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-        {t('products.automationCenter.headline')}
-          </div>
+
           <p className="text-lg text-muted">{t('products.automationCenter.description')}</p>
           <ul className="grid gap-3 text-sm text-muted sm:grid-cols-2">
         {features.map((feature) => (
