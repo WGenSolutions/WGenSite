@@ -17,6 +17,7 @@ import AuroraBackground from '../components/AuroraBackground'
 import { useActiveSection } from '../hooks/useActiveSection'
 import Seo from '../components/Seo'
 import { useTranslation } from 'react-i18next'
+import { CookieConsentBanner, CookieConsentProvider } from '../components/CookieConsent'
 
 const SECTION_IDS = [
   'offer',
@@ -58,27 +59,30 @@ function HomePage() {
   }, [])
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
-      <Seo />
-      <Header
-        sections={_sections}
-        activeSection={_activeSection}
-        onSectionSelect={(sectionId) => _setActiveSection(sectionId)}
-      />
-      <main className="relative z-10 flex flex-col gap-20 pb-24">
-        <AuroraBackground />
-        <Hero />
-        <Offer />
-        <NewEra />
-        <Products />
-        <Technologies />
-        <Experience />
-        <About />
-        <Hobby />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <CookieConsentProvider>
+      <div className="relative min-h-screen overflow-hidden bg-background text-foreground">
+        <Seo />
+        <Header
+          sections={_sections}
+          activeSection={_activeSection}
+          onSectionSelect={(sectionId) => _setActiveSection(sectionId)}
+        />
+        <main className="relative z-10 flex flex-col gap-20 pb-24">
+          <AuroraBackground />
+          <Hero />
+          <Offer />
+          <NewEra />
+          <Products />
+          <Technologies />
+          <Experience />
+          <About />
+          <Hobby />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+      <CookieConsentBanner />
+    </CookieConsentProvider>
   )
 }
 

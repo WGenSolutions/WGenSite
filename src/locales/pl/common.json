@@ -31,6 +31,19 @@
     "closeMenu": "Zamknij nawigację",
     "close": "Zamknij"
   },
+  "cookieConsent": {
+    "title": "Używamy plików cookie",
+    "description": "Pliki cookie są potrzebne do działania serwisu i do jego ulepszania. Zdecyduj, czy możemy zapisywać pliki cookie.",
+    "legal": "Możesz zmienić lub wycofać decyzję w dowolnym momencie w Ustawieniach plików cookie. Twoją decyzję stosujemy natychmiast do wszystkich plików cookie.",
+    "accept": "Akceptuj wszystkie pliki cookie",
+    "reject": "Odrzuć wszystkie pliki cookie",
+    "manage": "Ustawienia plików cookie",
+    "current": "Aktualny wybór: {{choice}}",
+    "status": {
+      "accepted": "wszystkie pliki cookie włączone",
+      "rejected": "wszystkie pliki cookie wyłączone"
+    }
+  },
   "languages": {
     "en": "Angielski",
     "pl": "Polski",

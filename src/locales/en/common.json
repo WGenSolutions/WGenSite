@@ -31,6 +31,19 @@
     "closeMenu": "Close navigation menu",
     "close": "Close"
   },
+  "cookieConsent": {
+    "title": "We use cookies",
+    "description": "Cookies support core functionality and help us improve the site. Choose whether we can store cookies.",
+    "legal": "You can change or withdraw your decision at any time via Cookie settings. We apply your choice to all cookies immediately.",
+    "accept": "Accept all cookies",
+    "reject": "Reject all cookies",
+    "manage": "Cookie settings",
+    "current": "Current choice: {{choice}}",
+    "status": {
+      "accepted": "all cookies enabled",
+      "rejected": "all cookies disabled"
+    }
+  },
   "languages": {
     "en": "English",
     "pl": "Polish"
