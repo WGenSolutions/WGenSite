@@ -241,15 +241,33 @@
   },
   "about": {
     "title": "About Us",
-    "intro": "We’re a small, passionate team of developers and designers who create fast, reliable, and scalable digital solutions. Our expertise covers web design, custom software development, and business process automation.",
+    "intro": "We’re a small, passionate team of freelance developers and designers who create fast, reliable, and scalable digital solutions. Our expertise covers web design, custom software development, and business process automation.",
     "highlightTitle": "What Makes Us Different?",
     "highlights": [
-      { "id": "speed", "text": "We deliver simple projects in as little as 48 hours — fast and professional." },
-      { "id": "value", "text": "Top-tier developers at fair rates — we focus on smart, efficient work." },
-      { "id": "ai", "text": "We use AI tools to accelerate development without compromising quality." },
-      { "id": "commitment", "text": "Deadlines matter — we’ll skip our favorite show if it means shipping faster." },
-      { "id": "automation", "text": "We help teams move beyond spreadsheets to smarter, scalable systems." },
-      { "id": "widget", "text": "Need a company widget or mini-app? We’ll design and build it for you." }
+      {
+        "id": "speed",
+        "text": "We deliver simple projects in as little as 48 hours — fast and professional."
+      },
+      {
+        "id": "value",
+        "text": "Top-tier developers at fair rates — we focus on smart, efficient work."
+      },
+      {
+        "id": "ai",
+        "text": "We use AI tools to accelerate development without compromising quality."
+      },
+      {
+        "id": "commitment",
+        "text": "Deadlines matter — we’ll skip our favorite show if it means shipping faster."
+      },
+      {
+        "id": "automation",
+        "text": "We help teams move beyond spreadsheets to smarter, scalable systems."
+      },
+      {
+        "id": "widget",
+        "text": "Need a company widget or mini-app? We’ll design and build it for you."
+      }
     ]
   },
   "hobby": {

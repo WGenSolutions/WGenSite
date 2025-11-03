@@ -141,40 +141,134 @@
     "projects": {
       "headline": "Wybrane realizacje",
       "items": [
-        { "id": "vanSalesApp", "title": "Aplikacja dla vansellerów", "description": "Mobilny dostęp do stanów magazynowych, zamówień i promocji — także w trybie offline." },
-        { "id": "productionMonitor", "title": "Monitor produkcji", "description": "Podgląd danych z linii produkcyjnej w czasie rzeczywistym oraz alerty jakościowe i wydajnościowe." },
-        { "id": "productionPlanning", "title": "Planowanie produkcji", "description": "Intuicyjne harmonogramy z wizualizacją zmian, zasobów i symulacją obciążenia." },
-        { "id": "productionDashboards", "title": "Dashboardy produkcyjne", "description": "Tablice OEE, KPI i statusy maszyn aktualizowane w czasie rzeczywistym." },
-        { "id": "workforceManagement", "title": "Zarządzanie pracownikami", "description": "System do planowania zmian, obecności i kompetencji w jednym miejscu." },
-        { "id": "employeeEvaluation", "title": "Ewaluacja pracowników", "description": "Cyfrowe arkusze ocen 360° oraz ścieżki rozwojowe zespołów." },
-        { "id": "warehouseOps", "title": "Obsługa magazynu", "description": "Przyjęcia, wydania i inwentaryzacje z integracją z systemami WMS i ERP." },
-        { "id": "officeAutomations", "title": "Automatyzacje biurowe", "description": "Roboty RPA i agenci AI wspierający zespoły administracyjne i back-office." },
-        { "id": "mobileApps", "title": "Firmowe aplikacje mobilne", "description": "Aplikacje do zgłoszeń, raportowania i obsługi serwisu terenowego." },
-        { "id": "documentFlow", "title": "Obieg dokumentów", "description": "Elektroniczny obieg dokumentów z akceptacjami i zgodnością z przepisami." },
-        { "id": "b2bPlatforms", "title": "Platformy B2B", "description": "Portale wspierające wymianę danych z klientami i dostawcami." },
-        { "id": "feedbackOps", "title": "Obsługa feedbacków", "description": "System zbierania opinii z hal, infolinii i sieci sprzedaży." },
-        { "id": "ecommerce", "title": "Sklep internetowy", "description": "Zintegrowane platformy e-commerce połączone z produkcją i magazynem." },
-        { "id": "gatehouseOps", "title": "Obsługa portierni", "description": "Rejestr wjazdów, kontrola dostępu i monitoring czasu pracy." },
-        { "id": "productionPrepAutomation", "title": "Automatyzacja przygotowania produkcji", "description": "Automatyczne generowanie dokumentacji technicznej i zestawień materiałowych." },
-        { "id": "shippingOps", "title": "Obsługa wysyłek", "description": "Panel wysyłek z etykietami, śledzeniem paczek i integracją z kurierami." },
-        { "id": "lunchOrdering", "title": "Platforma e-lunch", "description": "System do zamawiania posiłków i rozliczania benefitów pracowniczych." },
-        { "id": "analytics", "title": "Raporty i analizy", "description": "Zaawansowane raporty, wizualizacje i alerty wspierające decyzje zarządcze." },
-        { "id": "crm", "title": "CRM", "description": "System zarządzania relacjami z klientami dopasowany do Twojego procesu sprzedaży." }
+        {
+          "id": "vanSalesApp",
+          "title": "Aplikacja dla vansellerów",
+          "description": "Mobilny dostęp do stanów magazynowych, zamówień i promocji — także w trybie offline."
+        },
+        {
+          "id": "productionMonitor",
+          "title": "Monitor produkcji",
+          "description": "Podgląd danych z linii produkcyjnej w czasie rzeczywistym oraz alerty jakościowe i wydajnościowe."
+        },
+        {
+          "id": "productionPlanning",
+          "title": "Planowanie produkcji",
+          "description": "Intuicyjne harmonogramy z wizualizacją zmian, zasobów i symulacją obciążenia."
+        },
+        {
+          "id": "productionDashboards",
+          "title": "Dashboardy produkcyjne",
+          "description": "Tablice OEE, KPI i statusy maszyn aktualizowane w czasie rzeczywistym."
+        },
+        {
+          "id": "workforceManagement",
+          "title": "Zarządzanie pracownikami",
+          "description": "System do planowania zmian, obecności i kompetencji w jednym miejscu."
+        },
+        {
+          "id": "employeeEvaluation",
+          "title": "Ewaluacja pracowników",
+          "description": "Cyfrowe arkusze ocen 360° oraz ścieżki rozwojowe zespołów."
+        },
+        {
+          "id": "warehouseOps",
+          "title": "Obsługa magazynu",
+          "description": "Przyjęcia, wydania i inwentaryzacje z integracją z systemami WMS i ERP."
+        },
+        {
+          "id": "officeAutomations",
+          "title": "Automatyzacje biurowe",
+          "description": "Roboty RPA i agenci AI wspierający zespoły administracyjne i back-office."
+        },
+        {
+          "id": "mobileApps",
+          "title": "Firmowe aplikacje mobilne",
+          "description": "Aplikacje do zgłoszeń, raportowania i obsługi serwisu terenowego."
+        },
+        {
+          "id": "documentFlow",
+          "title": "Obieg dokumentów",
+          "description": "Elektroniczny obieg dokumentów z akceptacjami i zgodnością z przepisami."
+        },
+        {
+          "id": "b2bPlatforms",
+          "title": "Platformy B2B",
+          "description": "Portale wspierające wymianę danych z klientami i dostawcami."
+        },
+        {
+          "id": "feedbackOps",
+          "title": "Obsługa feedbacków",
+          "description": "System zbierania opinii z hal, infolinii i sieci sprzedaży."
+        },
+        {
+          "id": "ecommerce",
+          "title": "Sklep internetowy",
+          "description": "Zintegrowane platformy e-commerce połączone z produkcją i magazynem."
+        },
+        {
+          "id": "gatehouseOps",
+          "title": "Obsługa portierni",
+          "description": "Rejestr wjazdów, kontrola dostępu i monitoring czasu pracy."
+        },
+        {
+          "id": "productionPrepAutomation",
+          "title": "Automatyzacja przygotowania produkcji",
+          "description": "Automatyczne generowanie dokumentacji technicznej i zestawień materiałowych."
+        },
+        {
+          "id": "shippingOps",
+          "title": "Obsługa wysyłek",
+          "description": "Panel wysyłek z etykietami, śledzeniem paczek i integracją z kurierami."
+        },
+        {
+          "id": "lunchOrdering",
+          "title": "Platforma e-lunch",
+          "description": "System do zamawiania posiłków i rozliczania benefitów pracowniczych."
+        },
+        {
+          "id": "analytics",
+          "title": "Raporty i analizy",
+          "description": "Zaawansowane raporty, wizualizacje i alerty wspierające decyzje zarządcze."
+        },
+        {
+          "id": "crm",
+          "title": "CRM",
+          "description": "System zarządzania relacjami z klientami dopasowany do Twojego procesu sprzedaży."
+        }
       ]
     },
     "focus": "Obecnie koncentrujemy się na rozwoju automatyzacji biurowych i produkcyjnych realizowanych w naszej platformie Centrum Automatyzacji."
   },
   "about": {
     "title": "O nas",
-    "intro": "Jesteśmy zespołem pasjonatów technologii, którzy tworzą szybkie, niezawodne i skalowalne rozwiązania cyfrowe. Specjalizujemy się w projektowaniu stron internetowych, tworzeniu aplikacji dedykowanych oraz automatyzacji procesów biznesowych.",
+    "intro": "Jesteśmy zespołem freelancerów, pasjonatów technologii, którzy tworzą szybkie, niezawodne i skalowalne rozwiązania cyfrowe. Specjalizujemy się w projektowaniu stron internetowych, tworzeniu aplikacji dedykowanych oraz automatyzacji procesów biznesowych.",
     "highlightTitle": "Co nas wyróżnia?",
     "highlights": [
-      { "id": "speed", "text": "Najprostsze projekty realizujemy nawet w 48 godzin — szybko i profesjonalnie." },
-      { "id": "value", "text": "Świetni programiści, rozsądne stawki i efektywna praca — stawiamy na mądry rozwój." },
-      { "id": "ai", "text": "Wykorzystujemy sztuczną inteligencję (AI), by przyspieszyć development bez kompromisów jakości." },
-      { "id": "commitment", "text": "Zawsze dotrzymujemy terminów — czasem nawet kosztem odcinka ulubionego serialu." },
-      { "id": "automation", "text": "Pomagamy firmom odejść od Excela i przejść do nowoczesnych, zautomatyzowanych rozwiązań." },
-      { "id": "widget", "text": "Potrzebujesz firmowego widgetu lub miniaplikacji? Zaprojektujemy go dla Ciebie od podstaw." }
+      {
+        "id": "speed",
+        "text": "Najprostsze projekty realizujemy nawet w 48 godzin — szybko i profesjonalnie."
+      },
+      {
+        "id": "value",
+        "text": "Świetni programiści, rozsądne stawki i efektywna praca — stawiamy na mądry rozwój."
+      },
+      {
+        "id": "ai",
+        "text": "Wykorzystujemy sztuczną inteligencję (AI), by przyspieszyć development bez kompromisów jakości."
+      },
+      {
+        "id": "commitment",
+        "text": "Zawsze dotrzymujemy terminów — czasem nawet kosztem odcinka ulubionego serialu."
+      },
+      {
+        "id": "automation",
+        "text": "Pomagamy firmom odejść od Excela i przejść do nowoczesnych, zautomatyzowanych rozwiązań."
+      },
+      {
+        "id": "widget",
+        "text": "Potrzebujesz firmowego widgetu lub miniaplikacji? Zaprojektujemy go dla Ciebie od podstaw."
+      }
     ]
   },
   "hobby": {
